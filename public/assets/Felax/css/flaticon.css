@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("../fonts/flaticon.ttf@11184b081da12d149033daf06912e28f") format("truetype"), url("../fonts/flaticon.woff@11184b081da12d149033daf06912e28f") format("woff"), url("../fonts/flaticon.woff2@11184b081da12d149033daf06912e28f") format("woff2"), url("../fonts/flaticon.eot@11184b081da12d149033daf06912e28f") format("embedded-opentype"), url("../fonts/flaticon.svg@11184b081da12d149033daf06912e28f") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-star:before {
+  content: "";
+}
+
+.flaticon-medal:before {
+  content: "";
+}
+
+.flaticon-car:before {
+  content: "";
+}
+
+.flaticon-wifi:before {
+  content: "";
+}
+
+.flaticon-chef:before {
+  content: "";
+}
+
+.flaticon-smart-tv:before {
+  content: "";
+}
+
+.flaticon-stack-of-presentation-cards:before {
+  content: "";
+}
+
+.flaticon-housekeeping:before {
+  content: "";
+}
+
+.flaticon-swimming-pool:before {
+  content: "";
+}
+
+.flaticon-doctor:before {
+  content: "";
+}
+
+.flaticon-dish:before {
+  content: "";
+}
+
+.flaticon-room-service:before {
+  content: "";
+}
+
+.flaticon-wifi-1:before {
+  content: "";
+}
+
+.flaticon-parking:before {
+  content: "";
+}
+
+.flaticon-cutlery:before {
+  content: "";
+}
+
+.flaticon-fire:before {
+  content: "";
+}
+
+.flaticon-woodland:before {
+  content: "";
+}
+
+.flaticon-hiking:before {
+  content: "";
+}
+
+.flaticon-water:before {
+  content: "";
+}
+
+.flaticon-football:before {
+  content: "";
+}
+
+.flaticon-value:before {
+  content: "";
+}
+
+.flaticon-hotel:before {
+  content: "";
+}
+
+.flaticon-room-service-1:before {
+  content: "";
+}
+
+.flaticon-coffee-cup:before {
+  content: "";
+}
+
+.flaticon-lotion:before {
+  content: "";
+}
+
+.flaticon-barber:before {
+  content: "";
+}
+
+.flaticon-quote:before {
+  content: "";
+}
+
+.flaticon-play-button:before {
+  content: "";
+}

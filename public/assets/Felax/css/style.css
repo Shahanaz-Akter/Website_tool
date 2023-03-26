@@ -1,0 +1,4422 @@
+/*
+@File: Felax Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+** - Navbar CSS
+** - Buttons
+** - Home 1
+** - Home 2
+** - Home 3
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: constantiaFont;
+  src: url("../fonts/constantiaFont.ttf");
+}
+
+:root {
+  --fontFamily: 'constantiaFont';
+  --fontFamily2: 'Jost', sans-serif;
+  --mainColor: #b99470;
+  --whiteColor: #ffffff;
+  --blackColor: #000017;
+  --paragraphColor: #666666;
+  --card-title-fontSize: 24px;
+  --fontSize: 17px;
+  --transition: 0.5s;
+  --boxShadow:  rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fontFamily);
+}
+
+a {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--blackColor);
+  text-decoration: none;
+  outline: 0 !important;
+}
+
+a:hover {
+  color: var(--mainColor);
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-family: var(--fontFamily2);
+  color: var(--paragraphColor);
+  font-size: var(--fontSize);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.ptb-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pt-30 {
+  padding-top: 0px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.section-content {
+  margin-top: 10px;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  padding: 0px;
+  background-color: var(--whiteColor) !important;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.bg-0a0144 {
+  background-color: #0a0144;
+}
+
+.bg-f8f8f8 {
+  background-color: #f8f8f8;
+}
+
+.bg-1a1a1a {
+  background-color: #1a1a1a;
+}
+
+.bg-f8f9fc {
+  background-color: #f8f9fc;
+}
+
+.bg-f6f2ef {
+  background-color: #f6f2ef;
+}
+
+/*================================================
+Topbar Area CSS
+=================================================*/
+.topbar-left-area ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.topbar-left-area ul li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.topbar-left-area ul li a {
+  color: var(--whiteColor);
+}
+
+.topbar-left-area ul li a i {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.topbar-right-area {
+  text-align: right;
+}
+
+/*================================================
+Select Area CSS
+=================================================*/
+.nice-select {
+  border: 0px;
+  background-color: transparent;
+  height: auto;
+  width: 100%;
+  line-height: unset;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 23px;
+  padding-right: 15px;
+}
+
+.nice-select .selected {
+  color: var(--mainColor);
+}
+
+.nice-select .list {
+  width: 100%;
+  z-index: 99999;
+}
+
+.option-select-area {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  color: var(--paragraphColor);
+}
+
+.option-select-area .fa-globe {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 99;
+  color: var(--whiteColor);
+}
+
+.option-select-area .nice-select .list {
+  width: 85px;
+  z-index: 999999;
+}
+
+.option-select-area .nice-select::after {
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-color: var(--whiteColor);
+}
+
+.option-select-area .nice-select .current {
+  color: var(--whiteColor);
+  font-size: 14px;
+}
+
+/*================================================
+Navbar Area CSS
+=================================================*/
+a.meanmenu-reveal {
+  display: none;
+}
+
+.mean-container .mean-bar {
+  float: left;
+  width: 100%;
+  position: absolute;
+  background: transparent;
+  padding: 20px 0 0;
+  z-index: 2;
+  height: 60px;
+  text-transform: capitalize;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.mean-container .mean-bar * {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.mean-container a.meanmenu-reveal {
+  width: 35px;
+  height: 30px;
+  padding: 12px 15px 0 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: var(--mainColor);
+  text-decoration: none;
+  font-size: 16px;
+  text-indent: -9999em;
+  line-height: 22px;
+  font-size: 1px;
+  display: block;
+  font-weight: 700;
+}
+
+.mean-container a.meanmenu-reveal span {
+  display: block;
+  background: var(--mainColor);
+  height: 4px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.mean-container .mean-nav {
+  float: left;
+  width: 100%;
+  background: var(--whiteColor);
+  margin-top: 64px;
+}
+
+.mean-container .mean-nav ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  list-style-type: none;
+}
+
+.mean-container .mean-nav ul li {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.mean-container .mean-nav ul li a {
+  display: block;
+  float: left;
+  width: 90%;
+  padding: 1em 5%;
+  margin: 0;
+  text-align: left;
+  color: #677294;
+  border-top: 1px solid #dbeefd;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.mean-container .mean-nav ul li a:hover {
+  background: var(--whiteColor);
+}
+
+.mean-container .mean-nav ul li a.active {
+  color: var(--whiteColor);
+}
+
+.mean-container .mean-nav ul li li a {
+  width: 80%;
+  padding: 1em 10%;
+  color: #677294;
+  border-top: 1px solid #dbeefd;
+  opacity: 1;
+  filter: alpha(opacity=75);
+  text-shadow: none !important;
+  visibility: visible;
+  text-transform: none;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.mean-container .mean-nav ul li li li a {
+  width: 70%;
+  padding: 1em 15%;
+}
+
+.mean-container .mean-nav ul li li li li a {
+  width: 60%;
+  padding: 1em 20%;
+}
+
+.mean-container .mean-nav ul li li li li li a {
+  width: 50%;
+  padding: 1em 25%;
+}
+
+.mean-container .mean-nav ul li a.mean-expand {
+  margin-top: 3px;
+  width: 100%;
+  height: 24px;
+  padding: 12px !important;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  font-weight: 700;
+  background: transparent !important;
+  border: none !important;
+}
+
+.mean-container .mean-nav ul li.mean-last a {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.mean-container .mean-nav .navbar-nav {
+  overflow-y: scroll;
+  height: 342px;
+}
+
+.mean-container .mean-push {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.mean-nav .wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.mean-nav .dropdown-toggle::after {
+  display: none;
+}
+
+.mean-remove {
+  display: none !important;
+}
+
+.mobile-nav {
+  display: none;
+  position: relative;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+}
+
+.btn-primary,
+.btn-primary:active {
+  background-color: var(--whiteColor) !important;
+  color: var(--blackColor) !important;
+  border-color: var(--blackColor) !important;
+}
+
+.mobile-nav.mean-container .mean-nav ul li a.active {
+  color: var(--mainColor);
+}
+
+/* Fix for box sizing on Foundation Framework etc. */
+.main-nav {
+  background-color: transparent;
+}
+
+.main-nav nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.main-nav nav .navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-nav nav .navbar-nav .nav-item {
+  position: relative;
+  padding: 15px 0;
+}
+
+.main-nav nav .navbar-nav .nav-item a {
+  padding: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+  color: var(--blackColor);
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+.main-nav nav .navbar-nav .nav-item a i {
+  right: 0;
+  top: 7px;
+  font-size: 12px;
+  position: absolute;
+}
+
+.main-nav nav .navbar-nav .nav-item a:hover {
+  color: var(--mainColor);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-nav nav .navbar-nav .nav-item a::after {
+  display: none;
+}
+
+.main-nav nav .navbar-nav .nav-item a.dropdown-toggle {
+  padding-right: 13px;
+}
+
+.main-nav nav .navbar-nav .nav-item a.active {
+  color: var(--mainColor);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-nav nav .navbar-nav .nav-item:hover a {
+  color: var(--mainColor);
+}
+
+.main-nav nav .navbar-nav .nav-item:hover ul {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  visibility: visible;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu {
+  left: 0;
+  top: 60px;
+  opacity: 0;
+  z-index: 99;
+  width: 200px;
+  border: none;
+  display: block;
+  border-radius: 0px;
+  visibility: hidden;
+  position: absolute;
+  -webkit-transform: rotateX(-20deg);
+          transform: rotateX(-20deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  background: var(--whiteColor);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li {
+  position: relative;
+  padding: 0;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
+  margin: 0;
+  display: block;
+  padding: 7px 20px;
+  color: var(--blackColor);
+  border-bottom: 1px dashed transparent;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a i {
+  top: 50%;
+  position: absolute;
+  right: 10px !important;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a::before {
+  content: '\00BB';
+  font-size: 0px;
+  color: var(--mainColor);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover, .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
+  color: var(--mainColor);
+  padding-left: 25px;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover::before, .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active::before {
+  font-size: 20px;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+  position: absolute;
+  left: 101%;
+  top: 0;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
+  top: 20px;
+  left: 100%;
+  position: absolute;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+  color: var(--blackColor);
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+  color: var(--mainColor);
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: -5px !important;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu li:hover .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: -5px !important;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover a {
+  color: var(--mainColor);
+}
+
+.main-nav nav .navbar-nav .nav-item:last-child .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.navbar-light .navbar-brand {
+  color: var(--mainColor);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: var(--mainColor);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mean-container .mean-bar {
+  position: relative;
+}
+
+.mobile-nav .menu-sidebar-small-device {
+  display: none;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  position: absolute;
+  top: 15px;
+  right: 47px;
+}
+
+.mobile-nav .menu-sidebar-small-device .uni-button {
+  padding: 5px 10px;
+}
+
+.menu-sidebar {
+  margin-left: 15px;
+}
+
+.menu-sidebar ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-sidebar ul li {
+  margin-left: 15px;
+  line-height: 1;
+}
+
+.menu-sidebar ul li .default-button {
+  margin-bottom: -3px;
+}
+
+.menu-small-device {
+  display: none;
+  position: absolute;
+  right: 80px;
+  top: 14px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.menu-small-device li {
+  list-style: none;
+  display: inline-block;
+}
+
+.main-nav nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-nav nav .navbar-nav {
+  margin-right: 0px;
+}
+
+.header-area-3 .main-nav nav .navbar-nav {
+  margin-right: auto;
+}
+
+/*================================================
+Popup Area CSS
+=================================================*/
+.popup-button {
+  border: 0px;
+  font-size: 18px;
+  border-radius: 0px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: transparent;
+  color: var(--blackColor);
+  width: 50px;
+  height: 41px;
+  display: inline-block;
+}
+
+.popup {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  visibility: hidden;
+  background-color: #000000d4;
+}
+
+.popup .popup-content {
+  width: 0%;
+  height: 100%;
+  opacity: 0;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.popup .popup-content .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: var(--secondColor);
+  border: 0px;
+  font-size: 30px;
+}
+
+.popup .popup-content form {
+  top: 20%;
+  left: 50%;
+  width: 80%;
+  visibility: hidden;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.popup .popup-content form .search-box {
+  border-radius: 10px;
+  border: 1px solid var(--mainColor);
+}
+
+.popup .popup-content form .search-box input {
+  padding: 5px 20px;
+}
+
+.popup .popup-content form .search-box .form-control {
+  border-radius: 10px;
+  border: 0px solid transparent !important;
+}
+
+.popup .popup-content form .search-box .btn {
+  padding: 5px 15px;
+  color: var(--whiteColor);
+  border-radius: 10px;
+  background-color: var(--secondColor);
+  font-size: 25px;
+}
+
+.popup .hi {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+  opacity: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup .hi form {
+  visibility: visible;
+  top: 50% !important;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+/*================================================
+menu-small-device Area CSS
+=================================================*/
+.small-device-popup-btn {
+  border: 0px;
+  border-radius: 5px;
+  font-size: 20px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  color: var(--mainColor);
+  background-color: transparent;
+  margin-right: 15px;
+}
+
+.small-device-popup-btn:hover {
+  color: var(--mainColor);
+}
+
+.small-device-popup {
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  z-index: 999999;
+  visibility: hidden;
+  background-color: #000000;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.small-device-popup .sidebar-popup-content {
+  height: 100%;
+  opacity: 0;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.small-device-popup .sidebar-popup-content .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: red;
+  border: 0px;
+  font-size: 30px;
+  z-index: 99;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content {
+  padding: 100px 15px 50px 25px;
+  position: relative;
+  text-align: center;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content .footer-social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content .footer-social-icons span {
+  margin-right: 10px;
+  color: var(--whiteColor);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content .footer-social-icons ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content .footer-social-icons ul li {
+  display: inline-block;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content .footer-social-icons ul li a {
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin-left: 3px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--mainColor);
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0px 0px 15px -5px #cccccc;
+          box-shadow: 0px 0px 15px -5px #cccccc;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-content .footer-social-icons ul li a:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.small-device-popup .sidebar-popup-content form {
+  position: relative;
+  max-width: 95%;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.small-device-popup .sidebar-popup-content form .input-group {
+  border-radius: 10px;
+  border: 1px solid var(--mainColor);
+}
+
+.small-device-popup .sidebar-popup-content form .input-group input {
+  padding: 5px 20px;
+}
+
+.small-device-popup .sidebar-popup-content form .input-group .form-control {
+  border-radius: 10px;
+  border: 0px solid transparent !important;
+}
+
+.small-device-popup .sidebar-popup-content form .input-group .btn {
+  padding: 5px 15px;
+  color: var(--whiteColor);
+  border-radius: 10px;
+  background-color: var(--mainColor);
+  font-size: 20px;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-footer-area {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-footer-area h3 {
+  margin-bottom: 12px;
+  color: var(--whiteColor);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-footer-area ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-footer-area ul li {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-footer-area ul li i {
+  color: var(--mainColor);
+  margin-right: 5px;
+}
+
+.small-device-popup .sidebar-popup-content .sdp-footer-area ul li a {
+  color: var(--whiteColor);
+}
+
+.small-device-popup .s-active {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+  opacity: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.small-device-popup .s-active form {
+  visibility: visible;
+  top: 50% !important;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+/*================================================
+Header Responsive Area CSS
+=================================================*/
+@media only screen and (max-width: 767px) {
+  .topbar-right-side {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .topbar-left-side {
+    text-align: center;
+  }
+  .topbar-left-side ul li {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .topbar-right-side {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .topbar-left-side {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .main-nav nav .navbar-nav .nav-item a {
+    font-size: 14px;
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .main-responsive-nav {
+    background-color: #ffffff;
+    height: 65px;
+  }
+  .mobile-nav {
+    display: block;
+    position: relative;
+  }
+  .mobile-nav .logo {
+    top: 8px;
+    left: 0px;
+    z-index: 999;
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .mobile-nav nav .navbar-nav {
+    max-height: 68vh;
+    overflow-y: scroll;
+    -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    /* width */
+    /* Track */
+    /* Handle */
+    /* Handle on hover */
+  }
+  .mobile-nav nav .navbar-nav .nav-item a i {
+    display: none;
+  }
+  .mobile-nav nav .navbar-nav::-webkit-scrollbar {
+    width: 7px;
+  }
+  .mobile-nav nav .navbar-nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .mobile-nav nav .navbar-nav::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  .mobile-nav nav .navbar-nav::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .mean-container .mean-bar {
+    background-color: #ffffff;
+    padding: 0;
+  }
+  .mean-container a.meanmenu-reveal {
+    padding: 5px 2px 0 0;
+    -webkit-transition: 0s !important;
+    transition: 0s !important;
+  }
+  .main-nav {
+    display: none !important;
+  }
+  .menu-sidebar {
+    display: none;
+  }
+  .menu-small-device {
+    z-index: 2;
+    right: 50px;
+    top: 15px;
+    display: block !important;
+  }
+  .menu-small-device .default-button {
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+  .meanclose {
+    top: 60% !important;
+  }
+  .topbar-left-area {
+    text-align: center;
+  }
+  .topbar-left-area ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .mobile-nav .call-button {
+    top: 0;
+  }
+}
+
+.footer-logo-area img {
+  margin-bottom: 15px;
+}
+
+.footer-logo-area p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-logo-area ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.footer-logo-area ul li {
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.footer-logo-area ul li a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-logo-area ul li a i {
+  margin-right: 5px;
+  color: var(--mainColor);
+}
+
+.footer-links h3 {
+  color: var(--whiteColor);
+  margin-bottom: 25px;
+  position: relative;
+  margin-top: 10px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 400;
+}
+
+.footer-links ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-top: 12px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+}
+
+.footer-links ul li a {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links ul li a i {
+  margin-right: 5px;
+  color: var(--mainColor);
+}
+
+.footer-links ul li a:hover {
+  color: var(--mainColor);
+}
+
+.footer-general {
+  padding-left: 40px;
+}
+
+/*================================================ 
+CopyRight Area CSS
+=================================================*/
+.copyright {
+  border-top: 1px solid #eeeeee20;
+}
+
+.copyright {
+  color: var(--whiteColor);
+  position: relative;
+}
+
+.copyright p {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 15px;
+}
+
+.copyright p a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--mainColor);
+}
+
+.copyright p strong {
+  color: var(--whiteColor);
+}
+
+/*================================================
+Go Top CSS
+=================================================*/
+.go-top {
+  position: fixed;
+  cursor: pointer;
+  bottom: 00px;
+  right: 20px;
+  border-radius: 5px;
+  color: var(--mainColor);
+  z-index: 99;
+  height: 40px;
+  width: 50px;
+  background-color: var(--whiteColor);
+  display: inline-block;
+  padding: 0 10px 45px;
+  text-align: center;
+  opacity: 1;
+  visibility: hidden;
+  font-size: 20px;
+  -webkit-transition: var(--transition);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 10px 2px rgba(7, 7, 7, 0.1);
+}
+
+.go-top i {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.go-top:hover {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.go-top.active {
+  opacity: 1;
+  visibility: visible;
+  bottom: 65px;
+  -webkit-animation: top-bottom 5s infinite linear;
+          animation: top-bottom 5s infinite linear;
+}
+
+/*================================================
+Default button Area CSS
+=================================================*/
+.default-button {
+  padding: 12px 35px;
+  display: inline-block;
+  color: var(--whiteColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border: 1px solid var(--mainColor);
+  background-color: var(--mainColor);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--fontFamily2);
+}
+
+.default-button i {
+  margin-right: 5px;
+}
+
+.default-button:hover {
+  color: var(--whiteColor);
+  border-radius: 25px 0px 25px 0px;
+  background-color: var(--blackColor);
+}
+
+.default-button-2 {
+  color: var(--blackColor);
+  background-color: var(--whiteColor);
+}
+
+.default-button-2:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.read-more-button {
+  color: var(--blackColor);
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.read-more-button:hover {
+  letter-spacing: 1.1px;
+}
+
+/*================================================
+Default Section Area CSS
+=================================================*/
+.default-section-title span {
+  margin-bottom: 12px;
+  display: inline-block;
+  color: var(--mainColor);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--fontFamily2);
+}
+
+.default-section-title h3 {
+  line-height: 1.4;
+  margin-top: -5px;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.default-section-title-middle {
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*================================================
+Main Banner Area CSS
+=================================================*/
+.main-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/banner/banner-1-bg.png");
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.main-banner::before {
+  content: '';
+  height: 100%;
+  width: 30%;
+  background-color: rgba(185, 148, 112, 0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.main-banner .banner-social-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 9;
+}
+
+.main-banner .banner-social-icon ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.main-banner .banner-social-icon ul li a {
+  width: 30px;
+  height: 30px;
+  margin: 5px 0px;
+  color: var(--mainColor);
+  background-color: var(--whiteColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-banner .banner-social-icon ul li a:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.banner-text-area {
+  max-width: 705px;
+}
+
+.banner-text-area h6 {
+  margin-bottom: 12px;
+  color: var(--mainColor);
+  font-weight: 600;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+}
+
+.banner-text-area h1 {
+  margin-bottom: 12px;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.banner-text-area p {
+  font-size: 18px;
+}
+
+.banner-text-area .default-button {
+  margin-top: 10px;
+}
+
+.main-banner-img {
+  position: relative;
+  z-index: 1;
+}
+
+.main-banner-img .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main-banner-img .owl-dots .owl-dot {
+  position: relative;
+  padding-right: 40px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.main-banner-img .owl-dots .owl-dot::after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background-color: var(--blackColor);
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+
+.main-banner-img .owl-dots .owl-dot:last-child {
+  padding-right: 0px;
+}
+
+.main-banner-img .owl-dots .owl-dot:last-child::after {
+  display: none;
+}
+
+.main-banner-img .owl-dots .active {
+  color: var(--mainColor);
+}
+
+.booking-bg-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/shapes/sahpe-bg.jpg");
+}
+
+.booking-bg-1 .booking-card-2 .default-button {
+  background-color: var(--blackColor);
+}
+
+/*================================================
+index 01 About Area CSS
+=================================================*/
+.about-text-area p {
+  margin-top: 12px;
+}
+
+.about-text-area .about-card-area .about-card {
+  position: relative;
+  padding-left: 45px;
+  margin-top: 25px;
+}
+
+.about-text-area .about-card-area .about-card i {
+  font-size: 35px;
+  display: inline-block;
+  color: var(--mainColor);
+  position: absolute;
+  left: 0;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.about-text-area .about-card-area .about-card h4 {
+  line-height: 1.4;
+  margin-bottom: 0px;
+  font-size: var(--card-title-fontSize);
+}
+
+.about-text-area .default-button {
+  margin-top: 30px;
+}
+
+/*================================================
+Index 01 Amenities Area CSS
+=================================================*/
+.amenities-card {
+  margin-top: 30px;
+  position: relative;
+  padding: 30px 20px 25px 115px;
+  background-color: var(--whiteColor);
+}
+
+.amenities-card i {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--mainColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: var(--whiteColor);
+  position: absolute;
+  left: 30px;
+}
+
+.amenities-card h4 {
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.amenities-card:hover i {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/*================================================
+Index 01 Rooms Area CSS
+=================================================*/
+.rooms-card {
+  position: relative;
+  margin-top: 30px;
+}
+
+.rooms-card::before {
+  content: '';
+  width: 100%;
+  height: 0%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.rooms-card .room-price {
+  margin: 0px;
+  padding: 8px 15px;
+  display: inline-block;
+  color: var(--whiteColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--mainColor);
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.rooms-card .room-card-footer {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.rooms-card .room-card-footer h4 {
+  margin-bottom: 8px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 400;
+}
+
+.rooms-card .room-card-footer h4 a {
+  color: var(--whiteColor);
+}
+
+.rooms-card .room-card-footer p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.room-slider-area .center .rooms-card::before {
+  height: 100%;
+}
+
+.room-slider-area .center .rooms-card .room-price, .room-slider-area .center .rooms-card .room-card-footer {
+  opacity: 1;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.room-area-content {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.room-area-content .nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0px;
+}
+
+.room-area-content .nav .nav-link {
+  margin: 5px 10px;
+  padding: 5px 25px;
+  border-radius: 0px;
+  color: var(--blackColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border: 1px solid var(--mainColor);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.room-area-content .nav .active {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.room-area-content .fade {
+  -webkit-animation: bounceInUp .5s;
+          animation: bounceInUp .5s;
+}
+
+.room-area-content .default-button {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*================================================
+Index 01 Why Choose Us Area CSS
+=================================================*/
+.why-we-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/shapes/shapes-bg.jpg");
+}
+
+.why-we-text-area p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.why-we-text-area .why-we-list ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.why-we-text-area .why-we-list ul li {
+  width: 45%;
+  margin-bottom: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: var(--fontFamily);
+  font-family: var(--fontFamily2);
+}
+
+.why-we-text-area .why-we-list ul li i {
+  color: var(--mainColor);
+  margin-right: 5px;
+}
+
+.why-we-text-area .default-button {
+  margin-top: 10px;
+}
+
+.why-we-img-area {
+  position: relative;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+.why-we-img-area .second-img {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/*================================================
+Index 01 Testimonial Area CSS
+=================================================*/
+.testimonial-content-area {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/testimonial/testimonial-bg-1.jpg");
+  position: relative;
+  margin-top: 40px;
+}
+
+.testimonial-content-area::before {
+  content: '';
+  width: 40%;
+  height: 100%;
+  background-color: var(--whiteColor);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.testimonial-content-area .testimonial-slider-area {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.testimonial-content-area .testimonial-slider-area .owl-nav {
+  text-align: center;
+}
+
+.testimonial-content-area .testimonial-slider-area .owl-nav button {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--mainColor);
+}
+
+.testimonial-content-area .testimonial-slider-area .owl-nav button:hover {
+  color: var(--whiteColor);
+  background-color: var(--blackColor);
+}
+
+.testimonial-card {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  padding: 30px 30px 25px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: var(--whiteColor);
+}
+
+.testimonial-card .fa-quote-right {
+  color: rgba(185, 148, 112, 0.2);
+  font-size: 50px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 0;
+}
+
+.testimonial-card .testimonial-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-card .testimonial-card-header img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.testimonial-card .testimonial-card-header h4 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.testimonial-card .testimonial-card-header p {
+  margin-top: 0px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.testimonial-card p {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--blackColor);
+}
+
+/*================================================
+Index 01 Pricing  Area CSS
+=================================================*/
+.pricing-card {
+  text-align: center;
+  margin-top: 30px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/shapes/pricng-bg.jpg");
+  position: relative;
+}
+
+.pricing-card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--whiteColor);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pricing-card .pricing-card-header {
+  padding: 30px;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--blackColor);
+  border-radius: 0% 0% 50% 50% / 0% 0% 80% 80%;
+}
+
+.pricing-card .pricing-card-header::before {
+  content: '';
+  width: 0%;
+  height: 0%;
+  background-color: var(--mainColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border-radius: 0% 0% 50% 50% / 0% 0% 80% 80%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pricing-card .pricing-card-header h5 {
+  margin-bottom: 12px;
+  color: var(--whiteColor);
+  position: relative;
+  font-size: 20px;
+  font-family: var(--fontFamily2);
+}
+
+.pricing-card .pricing-card-header h3 {
+  margin-bottom: 0px;
+  color: var(--whiteColor);
+  position: relative;
+  font-size: 36px;
+  font-family: var(--fontFamily2);
+}
+
+.pricing-card .pricing-card-header h3 sub {
+  position: relative;
+  top: -5px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.pricing-card .pricing-card-text {
+  z-index: 2;
+  position: relative;
+  padding: 20px 20px 30px;
+}
+
+.pricing-card .pricing-card-text ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.pricing-card .pricing-card-text ul li {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+}
+
+.pricing-card .pricing-card-text ul li .fa-check {
+  color: green;
+}
+
+.pricing-card .pricing-card-text ul li .fa-times {
+  color: red;
+}
+
+.pricing-card .pricing-card-text ul li i {
+  margin-right: 5px;
+}
+
+.pricing-card .pricing-card-text .default-button {
+  margin-top: 10px;
+  color: var(--blackColor);
+  background-color: var(--whiteColor);
+}
+
+.pricing-card .pricing-card-text .default-button:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.pricing-card:hover::before {
+  height: 0%;
+  width: 0%;
+  border-radius: 50% 50% 0 0;
+}
+
+.pricing-card:hover .pricing-card-header::before {
+  width: 100%;
+  height: 100%;
+}
+
+.pricing-card:hover .pricing-card-text ul li {
+  color: var(--whiteColor);
+}
+
+.pricing-card:hover .default-button {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.pricing-card-active::before {
+  height: 0%;
+  width: 0%;
+}
+
+.pricing-card-active .pricing-card-header::before {
+  width: 100%;
+  height: 100%;
+}
+
+.pricing-card-active .pricing-card-text ul li {
+  color: var(--whiteColor);
+}
+
+.pricing-card-active .pricing-card-text .default-button {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Index 01 Booking Area CSS
+=================================================*/
+.booking-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/booking/booking-bg-1.jpg");
+  position: relative;
+}
+
+.booking-bg::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.booking-content {
+  position: relative;
+  text-align: center;
+}
+
+.booking-content h3 {
+  color: var(--whiteColor);
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.booking-content ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booking-content ul li {
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+  margin-right: 20px;
+  margin-bottom: 12px;
+}
+
+.booking-content ul li a {
+  color: var(--whiteColor);
+}
+
+.booking-content ul li a i {
+  margin-right: 5px;
+  color: var(--mainColor);
+}
+
+.booking-content ul li:last-child {
+  margin-right: 0px;
+}
+
+.booking-content .default-button {
+  margin-top: 15px;
+}
+
+/*================================================
+Index 01 Blog Area CSS
+=================================================*/
+.blog-card {
+  margin-top: 30px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.blog-card .blog-card-img {
+  overflow: hidden;
+}
+
+.blog-card .blog-card-img img {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.blog-card .blog-card-text {
+  padding-top: 25px;
+  margin-bottom: -5px;
+}
+
+.blog-card .blog-card-text .blog-date ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.blog-card .blog-card-text .blog-date ul li {
+  display: inline-block;
+  color: var(--paragraphColor);
+  margin-right: 15px;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+}
+
+.blog-card .blog-card-text .blog-date ul li:last-child {
+  margin-right: 0px;
+}
+
+.blog-card .blog-card-text .blog-date ul li i {
+  margin-right: 3px;
+  color: var(--mainColor);
+}
+
+.blog-card .blog-card-text h4 {
+  line-height: 1.4;
+  font-size: var(--card-title-fontSize);
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.blog-card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.blog-card:hover .blog-card-img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blog-date ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.blog-date ul li {
+  display: inline-block;
+  color: var(--paragraphColor);
+  margin-right: 15px;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+}
+
+.blog-date ul li:last-child {
+  margin-right: 0px;
+}
+
+.blog-date ul li i {
+  margin-right: 3px;
+  color: var(--mainColor);
+}
+
+/*================================================
+Index 01 Newsletter Area CSS
+=================================================*/
+.newsletter-1 {
+  position: relative;
+}
+
+.newsletter-1::before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background-color: var(--whiteColor);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.newsletter-content {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/newsletter-bg.jpg");
+  position: relative;
+  padding: 50px 30px;
+  z-index: 1;
+}
+
+.newsletter-content h3 {
+  margin-bottom: 0px;
+  color: var(--whiteColor);
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.newsletter-content .newsletter-forms .input-group {
+  border-radius: 0px;
+  background-color: var(--whiteColor);
+}
+
+.newsletter-content .newsletter-forms .form-control {
+  padding: 12px 15px;
+  border: 0px;
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.newsletter-content .newsletter-forms .btn {
+  margin: 3px;
+  padding: 5px 25px;
+  border-radius: 0px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+  color: var(--whiteColor);
+  background-color: var(--blackColor) !important;
+}
+
+.newsletter-content .newsletter-forms .disabled {
+  background-color: var(--blackColor) !important;
+}
+
+.validation-danger {
+  color: red;
+}
+
+.validation-success {
+  color: green;
+}
+
+.footer {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/footer-bg.jpg");
+}
+
+/*================================================
+Index 02 Banner Area CSS
+=================================================*/
+.home-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/banner/banner-2-bg.jpg");
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.banner-text-area-2 h1 {
+  font-size: 56px;
+}
+
+.header-area-2 .container-fluid {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+/*================================================
+Index 02 Room Area CSS
+=================================================*/
+.room-card-2 {
+  position: relative;
+  margin-top: 30px;
+}
+
+.room-card-2 .room-card-2-footer {
+  width: 100%;
+  text-align: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  background-color: var(--blackColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.room-card-2 .room-card-2-footer h4 {
+  margin: 0px;
+  padding: 15px 15px 10px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 400;
+}
+
+.room-card-2 .room-card-2-footer h4 a {
+  color: var(--whiteColor);
+}
+
+.room-card-2 .room-card-2-text {
+  width: 90%;
+  padding: 25px;
+  display: inline-block;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--mainColor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1, 0);
+          transform: translate(-50%, -50%) scale(1, 0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.room-card-2 .room-card-2-text h4 {
+  font-size: var(--card-title-fontSize);
+  margin-bottom: 5px;
+}
+
+.room-card-2 .room-card-2-text h4 a {
+  color: var(--whiteColor);
+}
+
+.room-card-2 .room-card-2-text span {
+  font-size: 14px;
+  display: inline-block;
+  color: var(--whiteColor);
+  margin-bottom: 12px;
+}
+
+.room-card-2 .room-card-2-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.room-card-2 .room-card-2-text .default-button {
+  background-color: var(--blackColor);
+}
+
+.room-card-2:hover .room-card-2-footer {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+}
+
+.room-card-2:hover .room-card-2-text {
+  -webkit-transform: translate(-50%, -50%) scale(1, 1);
+          transform: translate(-50%, -50%) scale(1, 1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.slider-dots .owl-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.slider-dots .owl-dots .owl-dot {
+  width: 30px;
+  height: 7px;
+  margin: 0px 5px;
+  border-radius: 25px;
+  background-color: var(--blackColor);
+}
+
+.slider-dots .owl-dots .active {
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Index 02 About Area CSS
+=================================================*/
+.about-text-area-2 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-text-area-2 .default-button {
+  margin-top: 10px;
+}
+
+.about-img-2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/about/a2.jpg");
+  position: relative;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.about-img-2 img {
+  display: none;
+}
+
+.about-img-2 .video-play-area a {
+  width: 70px;
+  height: 70px;
+  font-size: 25px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*================================================
+Index 02 Amenities Area CSS
+=================================================*/
+.amenities-card-2 {
+  margin-top: 30px;
+  padding: 30px 30px 25px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.amenities-card-2 .amenities-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.amenities-card-2 .amenities-card-header i {
+  width: 60px;
+  height: 60px;
+  font-size: 35px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--mainColor);
+  background-color: #f8f4f0;
+  margin-right: 15px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.amenities-card-2 .amenities-card-header h4 {
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.amenities-card-2:hover .amenities-card-header i {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Index 02 Booking Area CSS
+=================================================*/
+.booking-bg-2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/booking/booking-bg-2.jpg");
+}
+
+.booking-card-2 {
+  margin-top: 30px;
+}
+
+.booking-card-2 label {
+  color: var(--whiteColor);
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-family: var(--fontFamily2);
+}
+
+.booking-card-2 .form-control, .booking-card-2 .form-select {
+  background-color: var(--whiteColor);
+  color: var(--paragraphColor);
+  padding: 12px 15px;
+  border-radius: 0px;
+  border: 0px;
+  font-size: 17px;
+  font-family: var(--fontFamily2);
+}
+
+.booking-card-2 .form-control::after, .booking-card-2 .form-select::after {
+  display: none;
+}
+
+.booking-card-2 .form-control::-webkit-input-placeholder, .booking-card-2 .form-select::-webkit-input-placeholder {
+  color: var(--paragraphColor);
+}
+
+.booking-card-2 .form-control:-ms-input-placeholder, .booking-card-2 .form-select:-ms-input-placeholder {
+  color: var(--paragraphColor);
+}
+
+.booking-card-2 .form-control::-ms-input-placeholder, .booking-card-2 .form-select::-ms-input-placeholder {
+  color: var(--paragraphColor);
+}
+
+.booking-card-2 .form-control::placeholder, .booking-card-2 .form-select::placeholder {
+  color: var(--paragraphColor);
+}
+
+.booking-card-2 .default-button {
+  width: 100%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border: 1px solid var(--mainColor) !important;
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Index 02 Team Area CSS
+=================================================*/
+.team-card {
+  margin-top: 30px;
+}
+
+.team-card .team-card-text {
+  width: 85%;
+  text-align: center;
+  position: relative;
+  padding: 30px 20px 25px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--whiteColor);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -35px;
+}
+
+.team-card .team-card-text ul {
+  padding: 0;
+  opacity: 0;
+  margin: 0px 0px -35px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  position: relative;
+  z-index: 0;
+  list-style: none;
+}
+
+.team-card .team-card-text ul li {
+  display: inline-block;
+}
+
+.team-card .team-card-text ul li a {
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.team-card .team-card-text h4 {
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.team-card:hover .team-card-text {
+  margin-top: -85px;
+}
+
+.team-card:hover .team-card-text ul {
+  margin-bottom: 15px;
+  opacity: 1;
+}
+
+.tmb-20 {
+  margin-bottom: 10px;
+}
+
+/*================================================
+Index 02 Why Choose Us Area CSS
+=================================================*/
+.why-we-text-2 .why-we-list-2 ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.why-we-text-2 .why-we-list-2 ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  width: 45%;
+  color: var(--paragraphColor);
+  font-weight: 500;
+  font-size: var(15px);
+  font-family: var(--fontFamily2);
+}
+
+.why-we-text-2 .why-we-list-2 ul li i {
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
+  margin-right: 10px;
+  border-radius: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Index 02 Testimonials Area CSS
+=================================================*/
+.testimonial-card-2 {
+  margin-top: 30px;
+  padding: 30px 25px 25px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  position: relative;
+  text-align: center;
+}
+
+.testimonial-card-2 .flaticon-quote {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 0;
+  font-size: 45px;
+  color: var(--mainColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.testimonial-card-2 img {
+  border-radius: 50%;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.testimonial-card-2 h4 {
+  margin-bottom: 5px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.testimonial-card-2 span {
+  color: var(--paragraphColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  font-size: 14px;
+  font-family: var(--fontFamily2);
+}
+
+.testimonial-card-2 p {
+  margin-top: 10px;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--blackColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.testimonial-card-2:hover {
+  background-color: var(--mainColor);
+}
+
+.testimonial-card-2:hover h4, .testimonial-card-2:hover p, .testimonial-card-2:hover span, .testimonial-card-2:hover .flaticon-quote {
+  color: var(--whiteColor);
+}
+
+/*================================================
+Index 02 Blog Area CSS
+=================================================*/
+.blog-card-2 {
+  margin-top: 30px;
+  overflow: hidden;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: var(--whiteColor);
+}
+
+.blog-card-2 .blog-card-img {
+  overflow: hidden;
+}
+
+.blog-card-2 .blog-card-img img {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.blog-card-2 .blog-card-text {
+  padding: 30px 25px 25px;
+}
+
+.blog-card-2 .blog-card-text h4 {
+  line-height: 1.4;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.blog-card-2:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.blog-card-2:hover .blog-card-img img {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+
+.blog-2 {
+  position: relative;
+}
+
+.blog-2::before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background-color: #fbf9fe;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.blog-2 .container {
+  position: relative;
+  z-index: 1;
+}
+
+/*================================================
+Index 03 Banner Area CSS
+=================================================*/
+.banner-text-area-3 h1 {
+  font-size: 64px;
+}
+
+.banner-text-area-3 p {
+  max-width: 680px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/banner/banner--3-bg.jpg");
+}
+
+/*================================================
+Index 03 About Area CSS
+=================================================*/
+.about-text-3 .about-button-group ul {
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.about-text-3 .about-button-group ul li {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.about-text-3 .about-button-group ul li .about-tel-button {
+  margin-left: 15px;
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.about-text-3 .about-button-group ul li .about-tel-button i {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #b994702f;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--mainColor);
+  font-size: 15px;
+}
+
+.about-img-3 {
+  position: relative;
+}
+
+.about-img-3 .video-play-area a {
+  width: 80px;
+  height: 80px;
+  font-size: 35px;
+  padding-top: 8px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*================================================
+Index 03 Why Choose Us Area CSS
+=================================================*/
+.why-we-card-3 {
+  margin-top: 30px;
+  text-align: center;
+  padding: 30px 30px 25px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: var(--whiteColor);
+}
+
+.why-we-card-3 .why-we-icon-3 {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.why-we-card-3 .why-we-icon-3 .shape2 {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.why-we-card-3 .why-we-icon-3 i {
+  font-size: 35px;
+  color: var(--whiteColor);
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.why-we-card-3 h4 {
+  margin-top: 15px;
+  margin-bottom: 12px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.why-we-card-3:hover .why-we-icon-3 .shape2 {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
+/*================================================
+Index 03 Room Area CSS
+=================================================*/
+.room-card-3 {
+  padding: 15px 15px 25px;
+  margin-top: 30px;
+  text-align: center;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: var(--whiteColor);
+}
+
+.room-card-3 h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.room-card-3 p strong {
+  color: var(--blackColor);
+}
+
+.room-slider-area-3 {
+  position: relative;
+}
+
+.room-slider-area-3 .owl-nav {
+  opacity: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.room-slider-area-3 .owl-nav button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: var(--whiteColor) !important;
+  background-color: var(--mainColor) !important;
+}
+
+.room-slider-area-3:hover .owl-nav {
+  opacity: 1;
+}
+
+/*================================================
+Index 03 Services Area CSS
+=================================================*/
+.service-3 .default-section-title h3 {
+  color: var(--whiteColor);
+}
+
+.service-card-3 {
+  background-color: transparent;
+}
+
+.service-card-3 h4 a {
+  color: var(--whiteColor);
+}
+
+.service-card-3 p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*================================================
+Index 03 Video Area CSS
+=================================================*/
+.video-3-content {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/video-area-3-bg.jpg");
+  border: 10px solid var(--whiteColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  padding: 250px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.video-3-content a {
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  padding-top: 8px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.video-3 {
+  position: relative;
+}
+
+.video-3::before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background-color: #1a1a1a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/*================================================
+Index 03 Video Area CSS
+=================================================*/
+.service-type-card .service-type-card-text {
+  padding: 30px 25px 25px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--blackColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.service-type-card .service-type-card-text .stc-intro {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.service-type-card .service-type-card-text .stc-intro i {
+  width: 70px;
+  height: 70px;
+  font-size: 35px;
+  margin-right: 15px;
+  color: var(--mainColor);
+  background-color: var(--whiteColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.service-type-card .service-type-card-text .stc-intro p {
+  margin-bottom: 3px;
+  color: var(--whiteColor);
+}
+
+.service-type-card .service-type-card-text .stc-intro h5 {
+  font-size: var(--card-title-fontSize);
+  margin-bottom: 0px;
+  color: var(--whiteColor);
+}
+
+.service-type-card .service-type-card-text a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.service-type-slider-area .center .service-type-card .service-type-card-text {
+  background-color: var(--mainColor);
+}
+
+.service-type-slider-area .center .service-type-card .service-type-card-text a {
+  color: var(--mainColor);
+  background-color: var(--whiteColor);
+}
+
+/*================================================
+Index 03 Fun Facts Area CSS
+=================================================*/
+.fun-facts-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fun-facts-card h2 {
+  margin: 0px 15px -3px 0px;
+  color: var(--mainColor);
+  font-size: 64px;
+  font-family: var(--fontFamily2);
+}
+
+.fun-facts-card .fun-card-text span {
+  font-family: var(--fontFamily);
+  color: var(--blackColor);
+}
+
+.fun-facts-card .fun-card-text .fun-small-text {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.fun-facts-card .fun-card-text .fun-small-text::after {
+  content: '\a';
+  white-space: pre;
+}
+
+.fun-facts-card .fun-card-text .fun-large-text {
+  font-size: 30px;
+  line-height: 1;
+}
+
+/*================================================
+Index 03 Testimonial Area CSS
+=================================================*/
+.testimonial-content-area-2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/testimonial/testimonial-bg-1.jpg");
+  position: relative;
+  margin-top: 40px;
+}
+
+.testimonial-content-area-2::before {
+  content: '';
+  width: 40%;
+  height: 100%;
+  background-color: var(--whiteColor);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.testimonial-content-area-2 .testimonial-slider-area {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.testimonial-content-area-2 .testimonial-slider-area .owl-nav {
+  text-align: center;
+}
+
+.testimonial-content-area-2 .testimonial-slider-area .owl-nav button {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--mainColor);
+}
+
+.testimonial-content-area-2 .testimonial-slider-area .owl-nav button:hover {
+  color: var(--whiteColor);
+  background-color: var(--blackColor);
+}
+
+/*================================================
+Index 03 Booking Area CSS
+=================================================*/
+.booking-form-card-3 {
+  margin-top: 30px;
+}
+
+.booking-form-card-3 label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.booking-form-card-3 .form-control, .booking-form-card-3 .form-select {
+  border: 0px;
+  border-radius: 0px;
+  padding: 12px 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px #eeeeee;
+          box-shadow: 0px 0px 5px #eeeeee;
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.booking-form-card-3 .form-control::-webkit-input-placeholder, .booking-form-card-3 .form-select::-webkit-input-placeholder {
+  color: #505050;
+}
+
+.booking-form-card-3 .form-control:-ms-input-placeholder, .booking-form-card-3 .form-select:-ms-input-placeholder {
+  color: #505050;
+}
+
+.booking-form-card-3 .form-control::-ms-input-placeholder, .booking-form-card-3 .form-select::-ms-input-placeholder {
+  color: #505050;
+}
+
+.booking-form-card-3 .form-control::placeholder, .booking-form-card-3 .form-select::placeholder {
+  color: #505050;
+}
+
+.booking-form-card-3 .nice-select::after {
+  display: none;
+}
+
+.booking-form-card-3 .default-button {
+  width: 100%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/*================================================
+Index 03 Blog Area CSS
+=================================================*/
+.blog-card-3 {
+  margin-top: 30px;
+}
+
+.blog-card-3 .blog-card-3-img {
+  position: relative;
+}
+
+.blog-card-3 .blog-card-3-img span {
+  padding: 5px 15px;
+  display: inline-block;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.blog-card-3 .blog-date {
+  margin-top: 20px;
+}
+
+.blog-card-3 .blog-date a {
+  color: var(--paragraphColor);
+}
+
+.blog-card-3 h4 {
+  line-height: 1.4;
+  margin-top: 12px;
+  margin-bottom: -5px;
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+/*================================================
+Uni Banner Area CSS
+=================================================*/
+.uni-banner {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../images/inner-images/uni-bannner-bg-1.jpg");
+  position: relative;
+}
+
+.uni-banner::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  -webkit-box-shadow: -5px 0px 1px 5px var(--mainColor);
+          box-shadow: -5px 0px 1px 5px var(--mainColor);
+  border-radius: 20% 0% 0% 20% / 50% 0% 0% 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/inner-images/uni-banner-img.jpg");
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.uni-banner-text {
+  position: relative;
+  z-index: 1;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.uni-banner-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.uni-banner-text ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.uni-banner-text ul li {
+  display: inline-block;
+  margin: 0px 10px;
+  position: relative;
+  color: var(--blackColor);
+  font-weight: 600;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily);
+}
+
+.uni-banner-text ul li a {
+  color: var(--blackColor);
+}
+
+.uni-banner-text ul li::after {
+  content: '\f105';
+  font-size: 15px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  position: absolute;
+  right: -16px;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.uni-banner-text ul li:last-child::after {
+  display: none;
+}
+
+.paginations {
+  display: block;
+  text-align: center;
+}
+
+.paginations ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.paginations ul li {
+  display: inline-block;
+}
+
+.paginations ul li a {
+  padding: 3px 15px;
+  border-radius: 5px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border: 1px solid #b9947050;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: var(--fontFamily2);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.paginations ul li a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.paginations ul .active a {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Inner Booking Area CSS
+=================================================*/
+.inner-booking form .form-control, .inner-booking form .form-select {
+  background-color: rgba(185, 148, 112, 0.1);
+}
+
+/*================================================
+FAQ Area CSS
+=================================================*/
+.accordion-item {
+  margin-top: 20px;
+  border: 0px;
+}
+
+.accordion-button {
+  border: 1px solid var(--mainColor) !important;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  padding: 15px 15px 15px 60px;
+  background-color: var(--mainColor) !important;
+  color: var(--whiteColor) !important;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) span {
+  background-color: var(--whiteColor);
+}
+
+.accordion-button:not(.collapsed) span::before {
+  content: '-';
+  border-color: var(--mainColor);
+  color: var(--mainColor);
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  -webkit-transform-origin: center !important;
+          transform-origin: center !important;
+}
+
+.accordion-button[aria-expanded="false"] {
+  border: 0px solid var(--mainColor) !important;
+  background-color: #f8f4f0 !important;
+  color: var(--blackColor) !important;
+}
+
+.accordion-button[aria-expanded="false"] span {
+  background-color: var(--mainColor);
+}
+
+.accordion-button[aria-expanded="false"] span::before {
+  content: '+';
+  color: var(--whiteColor);
+}
+
+.accordion-header {
+  position: relative;
+}
+
+.accordion-header span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 100%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--blackColor);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.accordion-header span::before {
+  content: '+';
+  width: 25px;
+  height: 25px;
+  line-height: .9;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transform-origin: center !important;
+          transform-origin: center !important;
+}
+
+.accordion-collapse {
+  border: 0px;
+}
+
+.accordion-body {
+  border: 0px;
+  font-size: 16px;
+  -webkit-box-shadow: 0px 0px 10px -5px #cccccc;
+          box-shadow: 0px 0px 10px -5px #cccccc;
+}
+
+/*================================================ 
+Log In Page CSS
+=================================================*/
+.login-form {
+  margin-top: 20px;
+}
+
+.login-form form label {
+  color: var(--blackColor);
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.login-form form .form-control {
+  border: 1px solid #eeeeee;
+}
+
+.login-form form .form-check label {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.login-form form .default-button {
+  width: 100%;
+}
+
+.login-form p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.form-check-input:checked {
+  border-color: var(--mainColor);
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Error Area CSS
+=================================================*/
+.error {
+  border-top: 1px solid #eeeeee;
+}
+
+.error-content {
+  margin-top: 0px;
+}
+
+.error-content p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.error-content h1 {
+  margin: 0px 0px 10px;
+  line-height: 1;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FF2626), color-stop(#BD1616), to(#FF2626));
+  background-image: linear-gradient(to right, #FF2626, #BD1616, #FF2626);
+  font-size: 100px;
+  font-weight: 700;
+}
+
+/*================================================
+Terms & Privacy area CSS
+=================================================*/
+.terms {
+  margin-bottom: -15px;
+}
+
+.terms strong {
+  color: var(--blackColor);
+}
+
+.terms a {
+  color: var(--mainColor);
+}
+
+.terms h1, .terms h2, .terms h3, .terms h4, .terms h5 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-family: var(--fontFamily);
+  font-weight: 600;
+}
+
+.terms h6 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--fontFamily);
+}
+
+.terms h1 {
+  font-size: 30px;
+}
+
+.terms h2 {
+  font-size: 28px;
+}
+
+.terms h3 {
+  font-size: 26px;
+}
+
+.terms h4 {
+  font-size: 24px;
+}
+
+.terms h5 {
+  font-size: 22px;
+}
+
+.terms ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.terms ul li {
+  margin: 10px 0px;
+  font-size: var(--fontSize);
+  color: var(--paragraphColor);
+  font-family: var(--fontFamily2);
+}
+
+.terms ul li span {
+  font-weight: 700;
+  margin-right: 8px;
+  color: var(--blackColor);
+}
+
+.terms .payment li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.terms .payment li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--mainColor);
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+/*================================================
+Inner Services Area CSS
+=================================================*/
+.inner-amenities .amenities-card-2 {
+  text-align: center;
+}
+
+.inner-amenities .amenities-card-2 .amenities-card-header {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.inner-amenities .amenities-card-2 .amenities-card-header h4 {
+  margin-top: 20px;
+}
+
+/*================================================
+Room Details Area CSS
+=================================================*/
+.room-details-text-area .room-details-top-img {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.room-details-text-area .room-details-top-img::before {
+  content: '';
+  width: 100%;
+  height: 30px;
+  background-color: var(--whiteColor);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.room-details-text-area .room-details-top-img .rdt-text {
+  padding: 15px 30px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.room-details-text-area .room-details-top-img .rdt-text h4 {
+  margin: 0px;
+  font-size: var(--card-title-fontSize);
+  font-family: var(--fontFamily);
+}
+
+.room-details-text-area .room-details-top-img .rdt-text h3 {
+  margin: 0px;
+  color: var(--mainColor);
+  font-size: var(--card-title-fontSize);
+  font-family: var(--fontFamily2);
+}
+
+.room-details-text-area h3 {
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.rd-text-card-area {
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.rd-text-card-area .rd-card-text {
+  padding: 45px 30px 45px;
+}
+
+.rd-text-card-area .rd-card-text ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.rd-text-card-area .rd-card-text ul li {
+  margin-top: 12px;
+  font-size: 16px;
+  font-family: var(--fontFamily2);
+}
+
+.rd-text-card-area .rd-card-text ul li i {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  font-size: 15px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--mainColor);
+  background-color: #f8f4f0;
+}
+
+.rd-text-card-area .rtd-card-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/inner-images/rd2.jpg");
+  height: 100%;
+}
+
+.rd-text-card-area .rtd-card-img img {
+  display: none;
+}
+
+.rd-card-text-2 {
+  padding-left: 20px !important;
+}
+
+.rd-text-card-area .rtd-card-img-2 {
+  background-image: url("../images/inner-images/rd3.jpg");
+}
+
+.google-map {
+  width: 100%;
+  height: 400px;
+}
+
+.google-map .g-map {
+  height: 100%;
+  width: 100%;
+}
+
+/*================================================
+Service Details Page CSS
+=================================================*/
+.service-details-text-area .sd-main-img {
+  margin-bottom: 25px;
+}
+
+.service-details-text-area h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-details-text-area .sd-img-area {
+  margin-top: 10px;
+}
+
+.service-details-text-area .sd-img-area img {
+  margin-bottom: 20px;
+}
+
+.service-details-text-area .why-we-card-4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.service-details-text-area ul {
+  margin: 20px 0px 15px;
+}
+
+.service-details-text-area ul li {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: var(--fontFamily2);
+}
+
+/*================================================
+Blog Details area CSS
+=================================================*/
+.blog-quote {
+  background-color: #f6f2ef;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 30px;
+  border-radius: 0px;
+}
+
+.blog-quote p {
+  color: var(--blackColor);
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.blog-quote h5 {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.blog-quote h5 i {
+  color: var(--mainColor);
+  margin-right: 15px;
+}
+
+.blog-quote h5 span {
+  color: var(--paragraphColor);
+}
+
+.blog-text-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 0px;
+  padding: 3px 15px 15px 15px;
+  background-color: #f6f2ef;
+}
+
+.blog-text-footer ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.blog-text-footer ul li {
+  display: inline-block;
+}
+
+.blog-text-footer ul li span {
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 0px !important;
+  background-color: transparent !important;
+}
+
+.blog-text-footer .tag-area {
+  margin-top: 12px;
+}
+
+.blog-text-footer .tag-area ul li {
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+}
+
+.blog-text-footer .tag-area ul li i {
+  color: var(--mainColor);
+}
+
+.blog-text-footer .tag-area ul li:hover {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  color: var(--mainColor);
+}
+
+.blog-text-footer .tag-area ul li:first-child {
+  padding: 0px;
+}
+
+.blog-text-footer .social-icons {
+  margin-top: 12px;
+}
+
+.blog-text-footer .social-icons ul li a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px dashed var(--mainColor);
+  color: var(--mainColor);
+  background-color: #ffffff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blog-text-footer .social-icons ul li a:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.bd-comments {
+  margin-top: 30px;
+}
+
+.bd-comments h3 {
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.comment-card {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 115px;
+}
+
+.comment-card img {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+}
+
+.comment-card h5 {
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: var(--fontSize);
+}
+
+.comment-card span {
+  color: var(--paragraphColor);
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--fontFamily);
+}
+
+.comment-card p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-card a {
+  color: var(--mainColor);
+  font-weight: 500;
+}
+
+.bd-form {
+  margin-top: 30px;
+  border-radius: 0px;
+}
+
+.bd-form h3 {
+  font-size: var(--card-title-fontSize);
+  font-weight: 600;
+}
+
+.bd-form .form-control {
+  border: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  border-radius: 0px;
+  background-color: #f6f2ef;
+}
+
+.bd-form .form-check label {
+  color: var(--paragraphColor);
+  font-size: 15px;
+  font-family: var(--fontFamily2);
+}
+
+.bd-form .default-button {
+  margin-top: 15px;
+}
+
+.blog-details-text-area .bd-main-img {
+  margin-bottom: 25px;
+}
+
+.blog-details-text-area .blog-date {
+  margin-bottom: 15px;
+}
+
+.blog-details-text-area h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.blog-details-text-area .blog-details-text-img-area {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.blog-details-text-area .blog-details-text-img-area .bd-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/blog/b1.jpg");
+  height: 100%;
+}
+
+.blog-details-text-area .blog-details-text-img-area .bd-img img {
+  display: none;
+}
+
+.blog-details-text-area .blog-details-text-img-area .bd-img-text {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+/*================================================
+Details page Common Area CSS
+=================================================*/
+.sidebar-card {
+  background-color: #f8f4f0;
+  border-radius: 0px;
+  padding: 30px;
+}
+
+.sidebar-card h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--mainColor);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-card-form {
+  padding-top: 10px;
+}
+
+.sidebar-card-form form .booking-card-2 {
+  margin-top: 15px;
+}
+
+.sidebar-card-form form .booking-card-2 label {
+  color: var(--blackColor);
+}
+
+.sidebar-card-form form .default-button {
+  margin-top: 15px;
+}
+
+.service-sidebar ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.service-sidebar ul li {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: var(--fontFamily2);
+}
+
+.service-sidebar ul li i {
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--mainColor);
+}
+
+.call-sidebar-card {
+  background-color: var(--mainColor);
+}
+
+.call-sidebar-card h3 {
+  color: var(--whiteColor);
+  margin-bottom: 0;
+}
+
+.call-sidebar-card a {
+  font-size: 18px;
+  font-family: var(--fontFamily2);
+  color: var(--whiteColor);
+}
+
+.call-sidebar-card a i {
+  margin-right: 5px;
+}
+
+.search-box .input-group {
+  border: 1px solid #eeeeee;
+  border-radius: 0px;
+}
+
+.search-box .form-control {
+  background-color: var(--whiteColor);
+  border: 0px;
+  padding: 10px;
+  border-radius: 0px;
+}
+
+.search-box .btn {
+  border-radius: 0px !important;
+  color: var(--whiteColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--mainColor);
+}
+
+.search-box .btn:hover {
+  background-color: var(--blackColor);
+}
+
+.categories ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.categories ul li {
+  margin-top: 10px;
+  padding: 10px 15px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: var(--whiteColor);
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+  font-weight: 500;
+}
+
+.categories ul li a {
+  display: block;
+}
+
+.categories ul li i {
+  margin-right: 5px;
+  color: var(--mainColor);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.categories ul li:hover {
+  background-color: var(--mainColor);
+}
+
+.categories ul li:hover a {
+  color: var(--whiteColor);
+}
+
+.categories ul li:hover a i {
+  color: var(--whiteColor);
+}
+
+.categories ul .active {
+  background-color: var(--mainColor);
+}
+
+.categories ul .active i {
+  color: var(--whiteColor);
+}
+
+.categories ul .active a {
+  color: var(--whiteColor);
+}
+
+.recent-news, .sd-tag {
+  margin-top: 30px;
+}
+
+.recent-news-card {
+  margin-top: 20px;
+  min-height: 90px;
+  position: relative;
+  padding-left: 105px;
+}
+
+.recent-news-card img {
+  position: absolute;
+  left: 0;
+}
+
+.recent-news-card h5 {
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.recent-news-card p {
+  font-size: 14px;
+}
+
+.sd-tag ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.sd-tag ul li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.sd-tag ul li a {
+  font-size: 13px;
+  padding: 5px 15px 7px;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+  display: inline-block;
+  background-color: var(--whiteColor);
+}
+
+.sd-tag ul li a:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.sd-tag ul li:last-child {
+  margin-right: 0px;
+}
+
+/*================================================
+Contact Page Area CSS
+=================================================*/
+.contact-card {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+
+.contact-card i {
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.contact-card h4 {
+  margin-bottom: 5px;
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.contact-card p {
+  color: var(--paragraphColor);
+  margin-bottom: 0px;
+}
+
+.contact-card p a {
+  color: var(--paragraphColor);
+}
+
+.contact-page-form-area form {
+  margin-top: 20px;
+}
+
+.contact-page-form-area form .form-control {
+  padding: 15px 15px;
+  background-color: #f8f4f0;
+  border: 0px;
+  margin: 10px 0px;
+}
+
+.contact-page-form-area form .default-button {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.google-map {
+  width: 100%;
+  height: 500px;
+}
+
+.google-map .g-map {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */
