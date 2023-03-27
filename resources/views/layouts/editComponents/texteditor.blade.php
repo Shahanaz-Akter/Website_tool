@@ -1,5 +1,5 @@
 <span style="display: none!important;position:absolute;left:0px;z-index:1000; width:1050px;" id="text-editor-id">
-    <div class="editor d-flex flex-wrap ">
+    <div class="editor d-flex flex-wrap">
 
         <button class="btn text-white" onclick="document.execCommand('bold', false, null)">
             <i class="fa-solid fa-bold"></i>
@@ -8,8 +8,7 @@
             <i class="fa-solid fa-italic"></i>
         </button>
 
-        <button class="btn text-white" onclick="document.execCommand('underline', false, null)"
-            style="border: 1px solid gray">
+        <button class="btn text-white" onclick="document.execCommand('underline', false, null)" style="border: 1px solid gray">
             <i class="fa-solid fa-underline"></i>
         </button>
         <button class="btn text-white" onclick="document.execCommand('justifyLeft', false, null)">
@@ -45,8 +44,7 @@
                 Line Height
 
             </button>
-            <ul class=""
-                style="display:none; list-style-type:none;position:absolute;background:white;top:100%;padding:10px 20px;width:200px;box-shadow: 0px 2px 5px rgba(0,0,0,0.3);">
+            <ul class="" style="display:none; list-style-type:none;position:absolute;background:white;top:100%;padding:10px 20px;width:200px;box-shadow: 0px 2px 5px rgba(0,0,0,0.3);">
 
                 <li style="padding:5px;">
                     <button class="dropdown-item" onclick="setLineHeight(1)">Single</button>
@@ -66,9 +64,7 @@
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
-                <li><a class="dropdown-item" href="#"
-                        style="text-align:center; background:#313131;color:white;padding:5px 0px;border-radius:5px;"
-                        onclick="setLineHeight(null)">Custom</a>
+                <li><a class="dropdown-item" href="#" style="text-align:center; background:#313131;color:white;padding:5px 0px;border-radius:5px;" onclick="setLineHeight(null)">Custom</a>
                 </li>
             </ul>
         </div>
@@ -77,26 +73,21 @@
             <button type="button" class="btn text-white">
                 Font Size
             </button>
-            <ul
-                style="list-style-type:none;position:absolute;background:white;top:100%;padding:10px 20px;width:100px;box-shadow: 0px 2px 5px rgba(0,0,0,0.3);height:300px;overflow:scroll;">
-                @for ($i = 0; $i <= 90; $i++)
-                    <li>
-                        <button class="dropdown-item" onclick="setFontSize({{ $i }})"> {{ $i }}
-                        </button>
+            <ul style="list-style-type:none;position:absolute;background:white;top:100%;padding:10px 20px;width:100px;box-shadow: 0px 2px 5px rgba(0,0,0,0.3);height:300px;overflow:scroll;">
+                @for ($i = 0; $i <= 90; $i++) <li>
+                    <button class="dropdown-item" onclick="setFontSize({{$i}})"> {{ $i }}
+                    </button>
                     </li>
-                @endfor
-
-                <li>
-                    <hr class="dropdown-divider" />
-                </li>
-                <li><a class="dropdown-item" href="#">Custom</a></li>
+                    @endfor
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Custom</a></li>
             </ul>
         </div>
         <!-- Example single danger button -->
-        <!-- Example single danger button -->
         <div class="btn-group">
-            <button type="button" class="btn text-white dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
+            <button type="button" class="btn text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 Font Family
             </button>
             <ul class="dropdown-menu">
@@ -148,8 +139,7 @@
         </div>
         <!-- Example single danger button -->
         <div class="btn-group">
-            <button type="button" class="btn text-white dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
+            <button type="button" class="btn text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 Heading
             </button>
             <ul class="dropdown-menu">
@@ -190,35 +180,20 @@
                 <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
         </div>
-        <span class="d-flex justify-content-center position-relative"
-            style="width:40px;border:1px solid transparent;flex-direction: column;align-items: center;cursor: pointer;"
-            onmouseenter="showColorBox()" onmouseleave="hideColorBox()">
+        <span class="d-flex justify-content-center position-relative" style="width:40px;border:1px solid transparent;flex-direction: column;align-items: center;cursor: pointer;" onmouseenter="showColorBox()" onmouseleave="hideColorBox()">
             <i class="fa-solid fa-a" style="font-size: 15px;color:white;"></i>
             <span class="mt-1">
                 <div style="height:5px;width:20px;background-color: white;"></div>
             </span>
-            <span class="d-none position-absolute p-2" id="color_box"
-                style="top:100%;left:0px;height:200px;width:250px; background-color: #313131;">
+            <span class="d-none position-absolute p-2" id="color_box" style="top:100%;left:0px;height:200px;width:250px; background-color: #313131;">
                 <div class="d-flex justify-content-center flex-wrap">
                     <!-- <input type="color" value="#FFFF00"> -->
-                    <span
-                        style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: yellow;display: inline-block;"
-                        onclick="changeColor('yellow')"></span>
-                    <span
-                        style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: red;display: inline-block;"
-                        onclick="changeColor('red')"></span>
-                    <span
-                        style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: blue;display: inline-block;"
-                        onclick="changeColor('blue')"></span>
-                    <span
-                        style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: green;display: inline-block;"
-                        onclick="changeColor('green')"></span>
-                    <span
-                        style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: tomato;display: inline-block;"
-                        onclick="changeColor('tomato')"></span>
-                    <span
-                        style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: pink;display: inline-block;"
-                        onclick="changeColor('pink')"></span>
+                    <span style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: yellow;display: inline-block;" onclick="changeColor('yellow')"></span>
+                    <span style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: red;display: inline-block;" onclick="changeColor('red')"></span>
+                    <span style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: blue;display: inline-block;" onclick="changeColor('blue')"></span>
+                    <span style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: green;display: inline-block;" onclick="changeColor('green')"></span>
+                    <span style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: tomato;display: inline-block;" onclick="changeColor('tomato')"></span>
+                    <span style="border:2px solid transparent;border-radius:50px;height: 30px;width:30px;background-color: pink;display: inline-block;" onclick="changeColor('pink')"></span>
                 </div>
                 <br>
                 <span>Custom</span>
@@ -233,10 +208,12 @@
         </div>
     </div>
 </span>
-{{-- <div contenteditable="true" class="content" id="content"
+
+
+<!-- <div contenteditable="true" class="content" id="content"
         style="border: 1px solid transparent; outline: 1px solid transparent">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate
         cum impedit officia, veritatis quibusdam temporibus nulla saepe magni,
         tempora voluptatibus error molestias similique aliquid quod unde libero
         facilis! Alias.
-    </div> --}}
+    </div>  -->

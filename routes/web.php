@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
+    return view('Templates.Felax.index.demo');
+});
+
+Route::get('/webpage', function () {
     return view('Templates.Felax.index.demo');
 });

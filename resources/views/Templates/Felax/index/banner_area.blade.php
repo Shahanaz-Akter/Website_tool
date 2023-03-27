@@ -1,3 +1,5 @@
+<!-- banner area start -->
+
 <div class="main-banner">
     <div class="banner-social-icon">
         <ul>
@@ -11,31 +13,33 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="banner-text-area">
-                     
-                        <h6 onclick="contenteditable(this)">Luxury Hotel & Best Resort</h6>
-                  
-                    
-                        <h1 onclick="contenteditable(this)">The Boutique Design & Standard Room</h1>
-                   
-                             
-                        <p onclick="contenteditable(this)"> Lorem ipsum dolor sit amet, sed do eiusmod tempor ulabore et dolore
-                            magna aliqua. Quis ipsum
-                            suspendisse ultrices gravida. Risus commodo viverra.</p>
-                    
-                    {{-- <div class="contenteditable_container">
+
+                    <h6 onclick="contenteditable(this)">Luxury Hotel & Best Resort</h6>
+
+
+                    <h1 onclick="contenteditable(this)">The Boutique Design & Standard Room</h1>
+
+
+                    <p onclick="contenteditable(this)"> Lorem ipsum dolor sit amet, sed do eiusmod tempor ulabore et dolore
+                        magna aliqua. Quis ipsum
+                        suspendisse ultrices gravida. Risus commodo viverra.</p>
+
+                    <!-- <div class="contenteditable_container">
                         <h6 class="contenteditable contenteditable1">Luxury Hotel & Best Resort</h6>
                     </div>
                     <div class="contenteditable_container">
                         <h1 class="contenteditable">The Boutique Design & Standard Room</h1>
                     </div>
-                    <div class="contenteditable_container">           
+                    <div class="contenteditable_container">
                         <p class="contenteditable"> Lorem ipsum dolor sit amet, sed do eiusmod tempor ulabore et dolore
                             magna aliqua. Quis ipsum
                             suspendisse ultrices gravida. Risus commodo viverra.</p>
-                    </div> --}}
+                    </div> -->
                     <a class="default-button" href="about.html">Learn More</a>
                 </div>
             </div>
+
+            <!-- <div id="editor">Editor</div> -->
             <div class="col-lg-6">
                 <div class="main-banner-img owl-carousel">
                     <div class="main-banner-img-content" data-dot="1">
@@ -52,3 +56,5 @@
         </div>
     </div>
 </div>
+
+<!-- banner area end -->

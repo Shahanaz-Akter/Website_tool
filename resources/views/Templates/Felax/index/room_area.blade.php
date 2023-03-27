@@ -8,21 +8,17 @@
     <div class="section-content room-area-content">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="luxury-tab" data-bs-toggle="tab" data-bs-target="#luxury"
-                    type="button" role="tab" aria-controls="luxury" aria-selected="true">Luxury</button>
+                <button class="nav-link active" id="luxury-tab" data-bs-toggle="tab" data-bs-target="#luxury" type="button" role="tab" aria-controls="luxury" aria-selected="true">Luxury</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="family-tab" data-bs-toggle="tab" data-bs-target="#family" type="button"
-                    role="tab" aria-controls="family" aria-selected="false">Family</button>
+                <button class="nav-link" id="family-tab" data-bs-toggle="tab" data-bs-target="#family" type="button" role="tab" aria-controls="family" aria-selected="false">Family</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="double-bed-tab" data-bs-toggle="tab" data-bs-target="#double-bed"
-                    type="button" role="tab" aria-controls="double-bed" aria-selected="false">Double
+                <button class="nav-link" id="double-bed-tab" data-bs-toggle="tab" data-bs-target="#double-bed" type="button" role="tab" aria-controls="double-bed" aria-selected="false">Double
                     Bed</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="relax-tab" data-bs-toggle="tab" data-bs-target="#relax" type="button"
-                    role="tab" aria-controls="relax" aria-selected="false">Relax</button>
+                <button class="nav-link" id="relax-tab" data-bs-toggle="tab" data-bs-target="#relax" type="button" role="tab" aria-controls="relax" aria-selected="false">Relax</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -70,6 +66,7 @@
                     </div>
                 </div>
                 <a class="default-button mt-30" href="rooms.html">View All Rooms</a>
+
             </div>
             <div class="tab-pane fade" id="family" role="tabpanel" aria-labelledby="family-tab">
                 <div class="room-slider-area owl-carousel">
