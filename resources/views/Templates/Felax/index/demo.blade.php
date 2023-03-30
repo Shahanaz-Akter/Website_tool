@@ -5,6 +5,20 @@
 
 @section('header_imports')
 <style>
+    /* If you want yo use this variable mywidth you need to use like this way, width: var(--mywidth) function which It returns as value as 100%  */
+    :root {
+        --mywidth: 100%;
+    }
+
+    /* Universal * which removes all default margin, padding, box-sizing */
+    *,
+    ::before,
+    ::after {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
     .padding_button {
         position: relative;
         background-color: blueviolet;
@@ -68,8 +82,56 @@
         padding: 10px;
     }
 
+    /* Style the select container */
+    .select {
+        position: relative;
+        width: 200px;
+    }
 
-    /* image editor css styling */
+    /* Style the select dropdown */
+    .select select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Style the select arrow */
+    .select::after {
+        content: "\25BE";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #555;
+        pointer-events: none;
+    }
+
+    /* Style the select option */
+    .select select option {
+        color: #555;
+        background-color: #fff;
+    }
+
+    /* Style the select option when hovered */
+    .select select option:hover {
+        background-color: #eee;
+    }
+
+    /* Style the select option when selected */
+    .select select option:checked {
+        background-color: #2196F3;
+        color: #fff;
+    }
+
+
+    /* image editor css styling end */
 </style>
 <!-- Link of CSS files -->
 <link rel="stylesheet" href="{{ asset('/assets/Felax/css/animate.min.css') }}">
