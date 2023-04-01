@@ -19,6 +19,141 @@
         box-sizing: border-box;
     }
 
+
+    /* The switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 15px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 15px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+        width: 80%;
+        height: auto;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    /* popup css */
+    #myModal {
+        width: 30%;
+        height: auto;
+        display: none;
+        position: fixed;
+        left: 1000px;
+        top: 300px;
+        z-index: 1234567890001;
+        overflow: auto;
+        border: 1px solid white;
+        background-color: white;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* search input tag css */
+    .search-box {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 4px;
+    }
+
+    .search-box input[type="search"] {
+        border: none;
+        outline: none;
+        width: 100%;
+        margin-left: 8px;
+    }
+
+    .search-box button[type="submit"] {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .search-icon {
+        width: 20px;
+        height: 20px;
+        background-image: url('search-icon.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 8px;
+    }
+
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
     .padding_button {
         position: relative;
         background-color: blueviolet;

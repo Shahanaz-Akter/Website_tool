@@ -42,6 +42,26 @@ const disable1 = () => {
     }
 }
 
+
+// for hiding modal div 
+
+const disable_myModal = () => {
+    let myModal = document.querySelector('#myModal');
+    // console.log(myModal);
+
+    let myModal_style = window.getComputedStyle(myModal);
+    // console.log(myModal_style);
+
+    let myModal_property_value = myModal_style.getPropertyValue('display');
+    // console.log(myModal_value);
+
+    if (myModal_property_value == 'none') {
+        myModal.style.display = "";
+    } else {
+        myModal.style.display = "none";
+    }
+}
+
 const disable2 = () => {
     let linkImage = document.querySelector('#linkImage');
     // console.log(linkImage);
@@ -182,24 +202,28 @@ const file_upload = () => {
 
 const content = () => {
     let content = document.querySelector('#content');
+    let design = document.querySelector('#design');
+
     console.log(content);
     let content_style = window.getComputedStyle(content);
     let content_style_value = content_style.getPropertyValue('display');
     if (content_style_value == "none") {
         content.style.display = "";
-    } else {
-        content.style.display = "none";
+        design.style.display = "none";
+
     }
 }
 
 const design = () => {
-    let content = document.querySelector('#design');
+    let design = document.querySelector('#design');
+    let content = document.querySelector('#content');
     console.log(design);
     let design_style = window.getComputedStyle(design);
     let design_style_value = design_style.getPropertyValue('display');
     if (design_style_value == "none") {
         design.style.display = "";
-    } else {
-        design.style.display = "none";
+        content.style.display = "none";
     }
 }
+
+

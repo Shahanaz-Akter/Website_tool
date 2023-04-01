@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Templates.Felax.index.demo');
 });
+Route::get('/ex', function () {
+    return view('example_code');
+});
 
 Route::get('/webpage', function () {
     return view('Templates.Felax.index.demo');
