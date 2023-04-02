@@ -19,6 +19,19 @@
         box-sizing: border-box;
     }
 
+    /* range input tag css */
+    input[type="range"] {
+        width: 100px;
+        margin-left: 90px;
+
+    }
+
+    #range-value {
+        border: 1px solid blue;
+        width: 60px;
+        text-align: center;
+        margin-left: 5px;
+    }
 
     /* The switch - the box around the slider */
     .switch {

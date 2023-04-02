@@ -8,52 +8,53 @@
     <title>Document</title>
 
     <style>
-        .bar-wrapper {
-            width: 300px;
-            height: 20px;
-            border: 1px solid black;
-            position: relative;
+        input[type="range"] {
+            width: 100%;
         }
 
-        .bar {
-            width: 0%;
-            height: 100%;
-            background-color: green;
+        #range-container {
+            width: 200px;
         }
 
-        .bar-value {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            padding-left: 5px;
+        #range-value {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+            margin-left: 10px;
         }
     </style>
 </head>
 
 <body>
 
+    <body>
+        <div id="range-container">
+            <input type="range" min="0" max="1000" value="50" id="range-input">
+        </div>
+        <span id="range-value">50</span>
+        <script>
+            const rangeInput = document.querySelector('#range-input');
+            const rangeValue = document.querySelector('#range-value');
+            const rangeContainer = document.querySelector('#range-container');
 
+            function updateRangeValue() {
+                rangeValue.textContent = rangeInput.value;
+            }
 
-    <div class="bar-wrapper">
-        <div class="bar"></div><span class="bar-value">0</span>
-    </div><button onclick="increaseBar()">Increase Bar</button>
+            function updateRangeWidth() {
+                const rangeMax = rangeInput.getAttribute('max');
+                const rangeWidth = (rangeInput.value / rangeMax) * 100;
+                rangeContainer.style.width = rangeWidth + '%';
+            }
 
-    <script>
-        function increaseBar() {
-            let bar = document.querySelector('.bar');
-            let barValue = document.querySelector('.bar-value');
+            rangeInput.addEventListener('input', () => {
+                updateRangeValue();
+                updateRangeWidth();
+            });
 
-            let width = parseInt(bar.style.width) || 0;
-            width += 10;
-
-            bar.style.width = `${width}%`;
-            barValue.innerText = width;
-        }
-    </script>
-
-
-
-</body>
+            updateRangeValue();
+            updateRangeWidth();
+        </script>
+    </body>
 
 </html>

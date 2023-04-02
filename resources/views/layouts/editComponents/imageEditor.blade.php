@@ -103,28 +103,25 @@
             </section>
 
             <section style="background:white; margin-bottom: 20px;">
-                <div style="padding: 12px 12px;"><i class="fa-solid fa-desktop" style="padding-right: 10px;"></i>
-                    Change affects desktop and tablet</div>
-
-
-
-
+                <div style="padding: 12px 12px;">
+                    <i class="fa-solid fa-desktop" style="padding-right: 10px;"></i>
+                    Change affects desktop and tablet
+                </div>
                 <div style="display: flex; justify-content: space-between; padding: 30px 12px;">
                     <label for="full_width">Full Width</label>
-                    <label class="switch" style="height: 20%; width: 20%;">
+                    <div class="switch" style="height: 20%; width: 20%;">
                         <input type="checkbox" id="full_width" checked>
                         <span class="slider round"></span>
-                    </label>
+                    </div>
                 </div>
 
 
-                <div style="padding: 30px 12px;">
-                    <label for="width">Width</label>
-                    <label class="switch" style="height: 20%; width: 20%;">
-                        <input type="checkbox" id="width">
-                        <span class="slider round"></span>
-                    </label>
+                <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
+                    <label>Width</label>
+                    <input type="range" min="0" max="1000" value="50" id="range-input">
+                    <span id="range-value">50px</span>
                 </div>
+
 
             </section>
 
@@ -418,4 +415,23 @@
             document.removeEventListener("mouseup", closeDragElement);
             document.removeEventListener("mousemove", elementDrag);
         }
+    </script>
+
+
+    <script>
+        const rangeInput = document.querySelector('#range-input');
+        const rangeValue = document.querySelector('#range-value');
+
+        function updateRangeValue() {
+            let valu = rangeInput.value;
+            let va = valu + "px";
+
+            rangeValue.textContent = va;
+
+            console.log(va);
+            console.log(rangeValue.textContent);
+        }
+
+        rangeInput.addEventListener('input', updateRangeValue);
+        updateRangeValue();
     </script>
