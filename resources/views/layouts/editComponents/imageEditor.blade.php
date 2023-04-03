@@ -1,7 +1,7 @@
 <div>
     <!-- Image Editor Start-->
-    <div class="" style="position:absolute;left:80px; top: 180px; z-index:20001; width:400px; height: 550px; overflow:scroll; padding:15px;background: #f2f2f2; cursor: move;" id="image_editor">
-        <div class="bg-secondary" style="border: 2px solid gray!important; ">
+    <div class="" style="position:fixed;left:80px; top: 180px; z-index:20001; width:400px; height: 550px; overflow:scroll; padding:15px;background: #f2f2f2;" id="drag_parent">
+        <div class="bg-secondary" style="position:sticky;cursor:crosshair; padding: 10px;" id="drag_handle">
             <div style="margin: 10px 20px;">
                 <div class="d-flex justify-content-between flex-wrap">
                     <div class="" style=" position: sticky; top:0px; z-index:100990; text-transform: uppercase;">
@@ -51,7 +51,7 @@
 
             <div style="background: white!important; margin-bottom:20px; padding:20px 10px;" onclick="linkImage()">
                 <section style="display: flex; justify-content:space-between;">
-                    <span> <i class="fa-solid fa-phone" style="padding-right: 10px;"></i>Linked to call: 555-555-5555</span>
+                    <span> <i class="fa-solid fa-phone" style="padding-right: 10px;"></i>Linked to page: Home</span>
                     <span><i class=" fa-solid fa-chevron-right me-1"></i></span>
                 </section>
                 <small><a href="" style="color:black;">Remove link</a></small>
@@ -88,42 +88,116 @@
             <div class="d-flex justify-content-center align-items-center text-uppercase mb-3 mt-2 p-2">Image Design</div>
             <hr>
             <div style="background: white; display: flex; justify-content:space-around; padding: 12px;">
-                <div onclick="click_color1(this)">Layout</div>
-                <div onclick="click_color2(this)">Style</div>
-                <div onclick="click_color3(this)">Animation</div>
-                <div onclick="click_color4(this)">Spacing</div>
+                <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="layouts()">Layout</div>
+                <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="stylee()">Style</div>
+                <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="animations()">Animation</div>
+                <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="spacings()">Spacing</div>
             </div>
 
-            <div style="text-align:center; padding:10px">Layout</div>
-            <section style="background-color: white; display:flex; justify-content: space-between; box-sizing:border-box; margin-bottom: 20px;">
-                <div style="background-color: white;">
-                    <img class="" src=" {{asset('/assets/Felax/images/banner/banner-1-2.jpg')}}" style="background-position: center; padding: 40px;" alt="Card image" />
-                </div>
-                <span style="margin-top:40%;"><i class=" fa-solid fa-chevron-right"></i></span>
-            </section>
-
-            <section style="background:white; margin-bottom: 20px;">
-                <div style="padding: 12px 12px;">
-                    <i class="fa-solid fa-desktop" style="padding-right: 10px;"></i>
-                    Change affects desktop and tablet
-                </div>
-                <div style="display: flex; justify-content: space-between; padding: 30px 12px;">
-                    <label for="full_width">Full Width</label>
-                    <div class="switch" style="height: 20%; width: 20%;">
-                        <input type="checkbox" id="full_width" checked>
-                        <span class="slider round"></span>
+            <div id="layout">
+                <div style="text-align:center; padding:10px">Layout</div>
+                <section style="background-color: white; display:flex; justify-content: space-between; box-sizing:border-box; margin-bottom: 20px;">
+                    <div style="background-color: white;">
+                        <img class="" src=" {{asset('/assets/Felax/images/banner/banner-1-2.jpg')}}" style="background-position: center; padding: 40px;" alt="Card image" />
                     </div>
-                </div>
+                    <span style="margin-top:40%;"><i class=" fa-solid fa-chevron-right"></i></span>
+                </section>
+
+                <section style="background:white; margin-bottom: 20px;">
+                    <div style="padding: 12px 12px;">
+                        <i class="fa-solid fa-desktop" style="padding-right: 10px;"></i>
+                        Change affects desktop and tablet
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 30px 12px;">
+
+                    </div>
 
 
-                <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
-                    <label>Width</label>
-                    <input type="range" min="0" max="1000" value="50" id="range-input">
-                    <span id="range-value">50px</span>
-                </div>
+                    <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
+                        <label>Width</label>
+                        <input type="range" min="0" max="1000" value="50" id="range-input">
+                        <span id="range-value">50px</span>
+                    </div>
 
 
-            </section>
+                    <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
+                        <label for="">Full Width</label>
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                </section>
+            </div>
+
+            <div id="styl" style="display:none;">
+                <div style="text-align:center; padding:10px">Style</div>
+
+                <section style="background:white; margin-bottom: 20px;">
+                    <div style="padding: 12px 12px;">
+                        <i class="fa-solid fa-desktop" style="padding-right: 10px;"></i>
+                        Change affects desktop and tablet
+                    </div>
+
+                    <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
+                        <label>Border<i class="fa-solid fa-gear" style="padding-left: 10px;"></i></label>
+                        <input type="range" min="0" max="100" value="50" id="range-input1">
+                        <span id="range-value1">50px</span>
+                        <i class="fa fa-ban" style="padding-right:15px;"></i>
+                    </div>
+
+                    <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
+                        <label>Rounded Corner<i class="fa-solid fa-gear" style="padding-left: 10px;"></i></label>
+                        <input type="range" min="0" max="100" value="50" id="range-input2">
+                        <span id="range-value2">50%</span>
+                    </div>
+
+                    <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
+                        <label for="">Shadow</label>
+                        <div style="display: flex; gap: 10px;">
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <span><i class=" fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
+
+                <section style="background:white; margin-bottom: 20px;">
+                    <div style="padding: 12px 12px;">
+                        <i class="fa-solid fa-desktop" style="padding-right: 10px;"></i>
+                        Hover effect for desktop
+                    </div>
+
+                    <div style="">
+
+                    </div>
+                </section>
+            </div>
+
+
+            <div id="animation" style="display:none;">
+                <div style="text-align:center; padding:10px">Animation</div>
+                <section style="background-color: white; display:flex; justify-content: space-between; box-sizing:border-box; margin-bottom: 20px;">
+                    <div style="background-color: white;">
+                        <img class="" src="{{asset('/assets/Felax/images/banner/banner-1-2.jpg')}}" style="background-position: center; padding: 40px;" alt="Card image" />
+                    </div>
+                    <span style="margin-top:40%;"><i class=" fa-solid fa-chevron-right"></i></span>
+                </section>
+            </div>
+
+            <div id="spacing" style="display:none;">
+                <div style="text-align:center; padding:10px">Spacing</div>
+                <section style="background-color: white; display:flex; justify-content: space-between; box-sizing:border-box; margin-bottom: 20px;">
+                    <div style="background-color: white;">
+                        <img class="" src="{{asset('/assets/Felax/images/banner/banner-1-2.jpg')}}" style="background-position: center; padding: 40px;" alt="Card image" />
+                    </div>
+                    <span style="margin-top:40%;"><i class=" fa-solid fa-chevron-right"></i></span>
+                </section>
+            </div>
 
         </div>
 
@@ -297,8 +371,6 @@
     <!-- for existing div -->
     <script src="{{asset('/assets/Custom_js/existing.js')}}"></script>
 
-
-
     <!-- necessary files for popup js -->
     <script>
         // Get the modal
@@ -328,66 +400,24 @@
         }
     </script>
 
-
-    <!-- movable child element -->
-    <script>
-        // Get the child element
-        const child = document.getElementById("myModal");
-
-        // Set the initial position of the child element
-        let pos1 = 0,
-            pos2 = 0,
-            pos3 = 0,
-            pos4 = 0;
-        child.addEventListener("mousedown", dragMouseDown);
-
-        function dragMouseDown(ev) {
-            ev = ev || window.event;
-            ev.preventDefault();
-            // Get the mouse cursor position at startup
-            pos3 = ev.clientX;
-            pos4 = ev.clientY;
-            document.addEventListener("mouseup", closeDragElement);
-            // Call a function whenever the cursor moves
-            document.addEventListener("mousemove", elementDrag);
-        }
-
-        function elementDrag(eve) {
-            eve = eve || window.event;
-            eve.preventDefault();
-            // Calculate the new cursor position
-            pos1 = pos3 - eve.clientX;
-            pos2 = pos4 - eve.clientY;
-            pos3 = eve.clientX;
-            pos4 = eve.clientY;
-            // Set the child element's new position
-            child.style.top = (child.offsetTop - pos2) + "px";
-            child.style.left = (child.offsetLeft - pos1) + "px";
-        }
-
-        function closeDragElement() {
-            // Stop moving when mouse button is released
-            document.removeEventListener("mouseup", closeDragElement);
-            document.removeEventListener("mousemove", elementDrag);
-        }
-    </script>
-
-
-
     <!-- movable child for image_editor element -->
     <script>
-        // Get the child element
-        const child1 = document.getElementById("image_editor");
+        // Get the parent and child element
+        const drag_parent = document.getElementById("drag_parent");
+        const drag_handle = document.getElementById("drag_handle");
 
         // Set the initial position of the child element
         let p1 = 0,
             p2 = 0,
             p3 = 0,
             p4 = 0;
-        child1.addEventListener("mousedown", dragMouseDown);
+
+        drag_handle.addEventListener("mousedown", dragMouseDown);
 
         function dragMouseDown(e1) {
+            console.log(e1);
             e1 = e1 || window.event;
+            console.log(e1);
             e1.preventDefault();
             // Get the mouse cursor position at startup
             p3 = e1.clientX;
@@ -406,8 +436,8 @@
             p3 = e2.clientX;
             p4 = e2.clientY;
             // Set the child element's new position
-            child1.style.top = (child1.offsetTop - p2) + "px";
-            child1.style.left = (child1.offsetLeft - p1) + "px";
+            drag_parent.style.top = (drag_parent.offsetTop - p2) + "px";
+            drag_parent.style.left = (drag_parent.offsetLeft - p1) + "px";
         }
 
         function closeDragElement() {
@@ -419,19 +449,38 @@
 
 
     <script>
-        const rangeInput = document.querySelector('#range-input');
-        const rangeValue = document.querySelector('#range-value');
+        const rangeInput1 = document.querySelector('#range-input1');
+        const rangeValue1 = document.querySelector('#range-value1');
 
         function updateRangeValue() {
-            let valu = rangeInput.value;
+            let valu = rangeInput1.value;
             let va = valu + "px";
 
-            rangeValue.textContent = va;
+            rangeValue1.textContent = va;
 
             console.log(va);
-            console.log(rangeValue.textContent);
+            console.log(rangeValue1.textContent);
         }
 
-        rangeInput.addEventListener('input', updateRangeValue);
+        rangeInput1.addEventListener('input', updateRangeValue);
+        updateRangeValue();
+    </script>
+
+
+    <script>
+        const rangeInput2 = document.querySelector('#range-input2');
+        const rangeValue2 = document.querySelector('#range-value2');
+
+        function updateRangeValue() {
+            let valu = rangeInput2.value;
+            let va = valu + "%";
+
+            rangeValue2.textContent = va;
+
+            console.log(va);
+            console.log(rangeValue2.textContent);
+        }
+
+        rangeInput2.addEventListener('input', updateRangeValue);
         updateRangeValue();
     </script>

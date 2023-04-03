@@ -1,32 +1,169 @@
-const click_color1 = (layout_div) => {
-    console.log(layout_div);
-    layout_div.style.color = "red";
-    layout_div.style.transition = "all 0.5s ease-in";
-    layout_div.style.transition = "all 0.5s ease-out";
-}
-const click_color2 = (style_div) => {
-    console.log(style_div);
-    style_div.style.color = "red";
-    style_div.style.transition = ".5s";
 
-}
-const click_color3 = (animation_div) => {
-    console.log(animation_div);
-    animation_div.style.color = "red";
-    animation_div.style.transition = ".5s";
 
-}
-const click_color4 = (spacing_div) => {
-    console.log(spacing_div);
-    spacing_div.style.color = "red";
-    spacing_div.style.transition = ".5s";
+const stylee = () => {
 
+    let styl = document.querySelector('#styl');
+    let layout = document.querySelector('#layout');
+    let animation = document.querySelector('#animation');
+    let spacing = document.querySelector('#spacing');
+
+
+    let styl_style = window.getComputedStyle(styl);
+    let styl_value = styl_style.getPropertyValue('display');
+
+
+    let layout_style = window.getComputedStyle(layout);
+    let layout_value = layout_style.getPropertyValue('display');
+
+
+
+    let animation_style = window.getComputedStyle(animation);
+    let animation_value = animation_style.getPropertyValue('display');
+
+
+
+    let spacing_style = window.getComputedStyle(spacing);
+    let spacing_value = spacing_style.getPropertyValue('display');
+
+
+    if (styl_value == 'none') {
+        styl.style.display = "";
+        layout.style.display = "none";
+        animation.style.display = "none";
+        spacing.style.display = "none";
+    }
 }
+
+
+const layouts = () => {
+
+    let styl = document.querySelector('#styl');
+    let layout = document.querySelector('#layout');
+    let animation = document.querySelector('#animation');
+    let spacing = document.querySelector('#spacing');
+
+    console.log(styl);
+    console.log(layout);
+    console.log(animation);
+    console.log(spacing);
+
+
+    let styl_style = window.getComputedStyle(styl);
+    let styl_value = styl_style.getPropertyValue('display');
+    console.log(styl_value);
+
+
+    let layout_style = window.getComputedStyle(layout);
+    let layout_value = layout_style.getPropertyValue('display');
+    console.log(layout_value);
+
+
+    let animation_style = window.getComputedStyle(animation);
+    let animation_value = animation_style.getPropertyValue('display');
+    console.log(animation_value);
+
+
+    let spacing_style = window.getComputedStyle(spacing);
+    let spacing_value = spacing_style.getPropertyValue('display');
+    console.log(spacing_value);
+    console.log(styl_value == "none");
+
+    if (layout_value == 'none') {
+        layout.style.display = "";
+        styl.style.display = "none";
+        animation.style.display = "none";
+        spacing.style.display = "none";
+    }
+}
+
+const animations = () => {
+
+    let styl = document.querySelector('#styl');
+    let layout = document.querySelector('#layout');
+    let animation = document.querySelector('#animation');
+    let spacing = document.querySelector('#spacing');
+
+    console.log(styl);
+    console.log(layout);
+    console.log(animation);
+    console.log(spacing);
+
+
+    let styl_style = window.getComputedStyle(styl);
+    let styl_value = styl_style.getPropertyValue('display');
+    console.log(styl_value);
+
+
+    let layout_style = window.getComputedStyle(layout);
+    let layout_value = layout_style.getPropertyValue('display');
+    console.log(layout_value);
+
+
+    let animation_style = window.getComputedStyle(animation);
+    let animation_value = animation_style.getPropertyValue('display');
+    console.log(animation_value);
+
+
+    let spacing_style = window.getComputedStyle(spacing);
+    let spacing_value = spacing_style.getPropertyValue('display');
+    console.log(spacing_value);
+    console.log(styl_value == "none");
+
+    if (animation_value == 'none') {
+        animation.style.display = "";
+        styl.style.display = "none";
+        layout.style.display = "none";
+        spacing.style.display = "none";
+    }
+}
+
+
+const spacings = () => {
+
+    let styl = document.querySelector('#styl');
+    let layout = document.querySelector('#layout');
+    let animation = document.querySelector('#animation');
+    let spacing = document.querySelector('#spacing');
+
+    console.log(styl);
+    console.log(layout);
+    console.log(animation);
+    console.log(spacing);
+
+
+    let styl_style = window.getComputedStyle(styl);
+    let styl_value = styl_style.getPropertyValue('display');
+    console.log(styl_value);
+
+
+    let layout_style = window.getComputedStyle(layout);
+    let layout_value = layout_style.getPropertyValue('display');
+    console.log(layout_value);
+
+
+    let animation_style = window.getComputedStyle(animation);
+    let animation_value = animation_style.getPropertyValue('display');
+    console.log(animation_value);
+
+
+    let spacing_style = window.getComputedStyle(spacing);
+    let spacing_value = spacing_style.getPropertyValue('display');
+    console.log(spacing_value);
+    console.log(styl_value == "none");
+
+    if (spacing_value == 'none') {
+        spacing.style.display = "";
+        animation.style.display = "none";
+        styl.style.display = "none";
+        layout.style.display = "none";
+
+    }
+}
+
 
 // for hiding image_editor div 
-
 const disable1 = () => {
-    let image_editor = document.querySelector('#image_editor');
+    let image_editor = document.querySelector('#drag_parent');
     // console.log(image_editor);
 
     let image_editor_style = window.getComputedStyle(image_editor);
@@ -62,22 +199,7 @@ const disable_myModal = () => {
     }
 }
 
-const disable2 = () => {
-    let linkImage = document.querySelector('#linkImage');
-    // console.log(linkImage);
 
-    let linkImage_style = window.getComputedStyle(linkImage);
-    // console.log(linkImage_style);
-
-    let linkImage_property_value = linkImage_style.getPropertyValue('display');
-    // console.log(linkImage_property_value);
-
-    if (linkImage_property_value == 'block') {
-        linkImage.style.display = "none";
-    } else {
-        linkImage.style.display = "block";
-    }
-}
 
 const img_edit = () => {
 
