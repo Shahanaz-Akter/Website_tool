@@ -172,8 +172,16 @@
                         Hover effect for desktop
                     </div>
 
-                    <div style="">
-
+                    <div style="display: flex;flex-wrap:wrap;gap: 15px; padding: 12px 12px;">
+                        <div style="padding: 5px; border: 1px solid gray; color: red; filter:blur(0.6px);">None</div>
+                        <div style="padding: 5px;  border: 1px solid gray;" onmouseover="this.style.transform=`translateY(-15px)`;" onmouseout="this.style.transform=``">Float</div>
+                        <div style="padding: 5px; border: 1px solid gray;" onmouseover="this.style.filter=`blur(7px)`" onmouseout="this.style.filter=`blur()`">Blur</div>
+                        <div style="padding: 5px; border: 1px solid gray;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Opacity</div>
+                        <div style="padding: 5px;  border: 1px solid gray;" onmouseover="this.style.background=`#D3D3D3`" onmouseout="this.style.background=``">grayscale</div>
+                        <div style="padding: 5px; border: 1px solid gray;" onmouseover="this.style.scale=`1.1`" onmouseout="this.style.scale=``">Zoom Out</div>
+                        <div style="padding: 5px; border: 1px solid gray;" onmouseover="this.style.transform=`translateX(15px)`;" onmouseout="this.style.transform=``">Forward</div>
+                        <div style="padding: 5px; border: 1px solid gray; border: 1px solid gray;" onmouseover="this.style.color='orange';" onmouseout="this.style.color='black';">Reverse grayscale</div>
+                        <div style="padding: 5px; border: 1px solid gray;" onmouseover="this.style.filter=`blur(8px)`" onmouseout="this.style.filter=`blur()`">Blur & grayscale</div>
                     </div>
                 </section>
             </div>
@@ -181,21 +189,114 @@
 
             <div id="animation" style="display:none;">
                 <div style="text-align:center; padding:10px">Animation</div>
-                <section style="background-color: white; display:flex; justify-content: space-between; box-sizing:border-box; margin-bottom: 20px;">
-                    <div style="background-color: white;">
-                        <img class="" src="{{asset('/assets/Felax/images/banner/banner-1-2.jpg')}}" style="background-position: center; padding: 40px;" alt="Card image" />
+                <section style="background-color: white;  margin-bottom: 20px;">
+                    <div style="padding: 12px 12px;">
+                        <label for="">Trigger</label>
+                        <select name="trigger" id="cars" style="width: 100%; padding: 8px; box-sizing:border-box;">
+                            <option value="">Extrance</option>
+                            <option value="">Scroll</option>
+                        </select>
                     </div>
-                    <span style="margin-top:40%;"><i class=" fa-solid fa-chevron-right"></i></span>
+
+                    <div style="padding: 15px 12px;">
+                        <label for="">Animation</label>
+                        <select name="animation" id="cars" style="width: 100%; padding: 8px; box-sizing:border-box; overflow:scroll;">
+                            <option value="">Fade in</option>
+                            <option value="">None</option>
+                            <option value="">Fade in</option>
+                            <option value="">Slide in</option>
+                            <option value="">Bounce in</option>
+                            <option value="">Roll in</option>
+                            <option value="">Zoom in</option>
+                            <option value="">Flip in</option>
+                            <option value="">Flash</option>
+                            <option value="">Pulse</option>
+                            <option value="">Rubber band</option>
+                            <option value="">Shake</option>
+                            <option value="">Swing</option>
+                            <option value="">Tada</option>
+                            <option value="">Wobble</option>
+                        </select>
+                    </div>
+
+
+                    <div style="padding: 15px 12px;">
+                        <label for="">Direction</label>
+                        <select name="animation" id="cars" style="width: 100%; padding: 8px; box-sizing:border-box; overflow:scroll;">
+                            <option value="">In Place</option>
+                            <option value="">From right</option>
+                            <option value="">From left</option>
+                            <option value="">From bottom</option>
+                            <option value="">From top</option>
+
+                        </select>
+                    </div>
+
+                    <div style="display: flex; justify-content:space-between; padding: 15px 12px;">
+                        <label>Duration <i class="fa-regular fa-circle-question" style="padding-left: 10px;"></i></label>
+                        <input type="range" min="0" max="100" value="50" id="range-input-duration">
+                        <span class="range-value-duration range-value">50</span>
+                    </div>
+
+                    <div style="display: flex; justify-content:space-between;padding: 15px 12px;">
+                        <label>Delay <i class="fa-regular fa-circle-question" style="padding-left: 10px;"></i></label>
+                        <input type="range" min="0" max="3000" value="2150" id="range-input-delay">
+                        <span class="range-value-delay range-value">50</span>
+                    </div>
+                    <hr>
+
+                    <div style="display:flex; justify-content: space-between; padding: 15px 12px;">
+                        <small style="padding:5px 0px;"><a href="" style="color:black;">Recent to Deafult</a></small>
+                        <small style="border:1px solid black; border-radius:20px; padding:3px 20px;" onmouseover="this.style.border='1px solid red'; this.style.color='red';this.style.padding='3px 20px'; this.style.borderRadius='20px'" onmouseout="this.style.border='1px solid black'; this.style.color='black';this.style.padding='3px 20px'; this.style.borderRadius='20px'">Preview</small>
+                    </div>
+
                 </section>
             </div>
 
             <div id="spacing" style="display:none;">
                 <div style="text-align:center; padding:10px">Spacing</div>
-                <section style="background-color: white; display:flex; justify-content: space-between; box-sizing:border-box; margin-bottom: 20px;">
-                    <div style="background-color: white;">
-                        <img class="" src="{{asset('/assets/Felax/images/banner/banner-1-2.jpg')}}" style="background-position: center; padding: 40px;" alt="Card image" />
+                <section style="background-color: white; margin-bottom: 20px;">
+                    <div style="padding: 12px 12px;">
+
+                        <label for="margin-left">Margin-left</label>
+                        <input type="text" id="margin-left" name="" style="width: 15%; margin-bottom: 20px;">
+
+                        <label for="margin-right">Margin-right</label>
+                        <input type="text" id="margin-right" name="" style="width: 15%;margin-bottom: 10px;">
+
+
+                        <label for="margin-top">Margin-top</label>
+                        <input type="text" id="margin-top" name="" style="width: 15%; margin-bottom: 20px;">
+
+                        <label for="margin-bottom">Margin-bottom</label>
+                        <input type="text" id="margin-bottom" name="" style="width: 15%; margin-bottom: 20px;">
+
+                        <label for="padding-left">Padding-left</label>
+                        <input type="text" id="padding-left" name="" style="width: 15%; margin-bottom: 20px;">
+
+                        <label for="padding-right">Padding-right</label>
+                        <input type="text" id="padding-right" name="" style="width: 15%; margin-bottom: 20px;">
+
+
+                        <label for="padding-top">Padding-top</label>
+                        <input type="text" id="padding-top" name="" style="width: 15%; margin-bottom: 20px;">
+
+                        <label for="padding-bottom">Padding-bott</label>
+                        <input type="text" id="padding-bottom" name="" style="width: 15%; margin-bottom: 20px;">
+
+
+
+                        <!-- <button class="btn btn-primary"></button> -->
+
+                        <!-- <label for="margin-top">Margin-top</label>
+                        <input type="text" id="margin-top" name="" style="width:var(--mywidth);">
+                        <label for="margin-bottom">Margin-bottom</label>
+                        <input type="text" id="margin-bottom" name="" style="width:var(--mywidth);"> -->
+
+
+
+
                     </div>
-                    <span style="margin-top:40%;"><i class=" fa-solid fa-chevron-right"></i></span>
                 </section>
             </div>
 
@@ -353,7 +454,6 @@
                 </div>
             </div>
 
-
             <!-- <div style="padding-bottom: 50px; padding-top: 50px;">No Files have been selected yet. Click on upload new files to begin adding your files.</div> -->
 
             <hr>
@@ -482,5 +582,41 @@
         }
 
         rangeInput2.addEventListener('input', updateRangeValue);
+        updateRangeValue();
+    </script>
+
+    <script>
+        const range_input_duration = document.querySelector('#range-input-duration');
+        const range_value_duration = document.querySelector('.range-value-duration');
+
+        function updateRangeValue() {
+            let valu = range_input_duration.value;
+            let va = valu;
+
+            range_value_duration.textContent = va;
+
+            console.log(va);
+            console.log(range_value_duration.textContent);
+        }
+
+        range_input_duration.addEventListener('input', updateRangeValue);
+        updateRangeValue();
+    </script>
+
+    <script>
+        const range_input_delay = document.querySelector('#range-input-delay');
+        const range_value_delay = document.querySelector('.range-value-delay');
+
+        function updateRangeValue() {
+            let valu = range_input_delay.value;
+            let va = valu;
+
+            range_value_delay.textContent = va;
+
+            console.log(va);
+            console.log(range_value_delay.textContent);
+        }
+
+        range_input_delay.addEventListener('input', updateRangeValue);
         updateRangeValue();
     </script>

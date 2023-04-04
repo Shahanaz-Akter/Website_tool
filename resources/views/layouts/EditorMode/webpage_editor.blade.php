@@ -24,9 +24,7 @@
                         @yield('site')
                     </div>
                 </div>
-
             </div>
-
         </div>
     </main>
     @yield('script_imports')

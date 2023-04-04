@@ -34,11 +34,19 @@
 
 
     #range-value {
-        border: 1px solid blue;
+        border: 1px solid black;
         width: 60px;
         text-align: center;
         margin-left: 5px;
     }
+
+    .range-value {
+        border: 1px solid black;
+        width: 60px;
+        text-align: center;
+        margin-left: 5px;
+    }
+
 
     /* The switch - the box around the slider */
     .toggle {
