@@ -323,6 +323,19 @@ const file_upload = () => {
 
 
 const content = () => {
+    let cont1 = document.querySelector('#cont');
+    let desig1 = document.querySelector('#desig');
+    let cont_style1 = window.getComputedStyle(cont1);
+    let cont_color1 = cont_style1.getPropertyValue('color');
+
+
+    if (cont_color1 == 'rgb(255, 255, 255)') {
+        cont1.style.color = "orange";
+        cont1.style.border = "1px solid orange";
+        desig1.style.color = 'rgb(255, 255, 255)';
+        desig1.style.border = "1px solid rgb(255, 255, 255)";
+    }
+
     let content = document.querySelector('#content');
     let design = document.querySelector('#design');
 
@@ -332,14 +345,29 @@ const content = () => {
     if (content_style_value == "none") {
         content.style.display = "";
         design.style.display = "none";
-
     }
 }
 
 const design = () => {
+    let cont = document.querySelector('#cont');
+    let desig = document.querySelector('#desig');
+    let desig_style = window.getComputedStyle(desig);
+    let desig_color = desig_style.getPropertyValue('color');
+
+
+    if (desig_color == 'rgb(255, 255, 255)') {
+        desig.style.color = "orange";
+        desig.style.border = "1px solid orange";
+        cont.style.color = 'rgb(255, 255, 255)';
+        cont.style.border = "1px solid rgb(255, 255, 255)";
+
+    }
+
+
     let design = document.querySelector('#design');
     let content = document.querySelector('#content');
     console.log(design);
+
     let design_style = window.getComputedStyle(design);
     let design_style_value = design_style.getPropertyValue('display');
     if (design_style_value == "none") {

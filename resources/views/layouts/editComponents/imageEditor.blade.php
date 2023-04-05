@@ -1,31 +1,25 @@
 <div>
     <!-- Image Editor Start-->
-    <div class="" style="position:fixed;left:80px; top: 180px; z-index:20001; width:400px; height: 550px; overflow:scroll; padding:15px;background: #f2f2f2;" id="drag_parent">
-        <div class="bg-secondary" style="position:sticky;cursor:crosshair; padding: 10px;" id="drag_handle">
-            <div style="margin: 10px 20px;">
-                <div class="d-flex justify-content-between flex-wrap">
-                    <div class="" style=" position: sticky; top:0px; z-index:100990; text-transform: uppercase;">
-                        <div class="btn btn-outline-success text-white" onclick="content()">
-                            Content
-                        </div>
-                        <div class="btn btn-outline-success text-white" onclick="design()">
-                            Design
-                        </div>
-                    </div>
+    <div id="drag_parent" style="position:fixed;left:80px; top: 180px; z-index:5; width:360px; height: 560px; overflow:scroll; padding:10px;background: #f2f2f2; border: 4px solid white; border-radius: 10px;">
+        <div style="background:	#2f373a; position:sticky;cursor:move; padding: 5px;" id="drag_handle">
 
-                    <div class="">
-                        <div class="btn text-success">
-                            <i class="fa-solid fa-check fa-beat font-success text-white" style="font-size: 20px;" onclick="disable_editor(this)"></i>
-                        </div>
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap; position: sticky; top:0px; z-index:100990; text-transform: uppercase; padding: 5px;">
+                <span>
+                    <button id="cont" onclick="content()" style="border:1px solid orange; color: orange; background: #2f373a; padding: 5px 10px; text-transform: uppercase;">
+                        Content
+                    </button>
+                    <button id="desig" onclick="design()" style="border:1px solid white; color: white;background: #2f373a; padding: 5px 10px; text-transform: uppercase;">
+                        Design
+                    </button>
+                </span>
 
-                        <div class="btn text-success">
-                            <i class="fa-sharp fa-solid fa-xmark text-black" style="font-size: 20px;" onclick="disable1()"></i>
-                            <!-- <button> <i class="fa-solid fa-xmark" style="font-size: 20px;" onclick="disable_editor(this)"></i></button> -->
-                        </div>
-                    </div>
 
-                </div>
+                <span style="">
+                    <i class="fa-sharp fa-solid fa-xmark" style="font-size: 20px;color:red; margin-right:5px;" onclick="disable1()"></i>
+                    <!-- <button> <i class="fa-solid fa-xmark" style="font-size: 20px;" onclick="disable_editor(this)"></i></button> -->
+                </span>
             </div>
+
         </div>
 
 
@@ -87,7 +81,7 @@
 
             <div class="d-flex justify-content-center align-items-center text-uppercase mb-3 mt-2 p-2">Image Design</div>
             <hr>
-            <div style="background: white; display: flex; justify-content:space-around; padding: 12px;">
+            <div style="background: white; display: flex; justify-content:space-around; padding: 20px 12px;">
                 <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="layouts()">Layout</div>
                 <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="stylee()">Style</div>
                 <div onmouseenter="this.style.color='red'" onmouseout="this.style.color='black'" onclick="animations()">Animation</div>
@@ -115,8 +109,9 @@
 
                     <div style="display: flex; justify-content:space-between; padding: 30px 12px;">
                         <label>Width</label>
-                        <input type="range" min="0" max="1000" value="50" id="range-input">
-                        <span id="range-value">50px</span>
+                        <input type="range" min="0" max="100" value="50" id="range-input1">
+                        <span id="range-value1" style="padding: 1px 2px;">50px</span>
+                        <input type="text" placeholder="+" style="margin-left:2px; width: 20%; padding: 1px 2px; text-align:center;">
                     </div>
 
 
@@ -258,44 +253,48 @@
                 <section style="background-color: white; margin-bottom: 20px;">
                     <div style="padding: 12px 12px;">
 
-                        <label for="margin-left">Margin-left</label>
-                        <input type="text" id="margin-left" name="" style="width: 15%; margin-bottom: 20px;">
+                        <label for="margin-left" style="margin-left: 5px;">Margin-L</label>
+                        <input type="text" id="margin-left" name="" placeholder="20px.." style="width: 20%; margin-bottom: 20px; text-align:center;">
 
-                        <label for="margin-right">Margin-right</label>
-                        <input type="text" id="margin-right" name="" style="width: 15%;margin-bottom: 10px;">
-
-
-                        <label for="margin-top">Margin-top</label>
-                        <input type="text" id="margin-top" name="" style="width: 15%; margin-bottom: 20px;">
-
-                        <label for="margin-bottom">Margin-bottom</label>
-                        <input type="text" id="margin-bottom" name="" style="width: 15%; margin-bottom: 20px;">
-
-                        <label for="padding-left">Padding-left</label>
-                        <input type="text" id="padding-left" name="" style="width: 15%; margin-bottom: 20px;">
-
-                        <label for="padding-right">Padding-right</label>
-                        <input type="text" id="padding-right" name="" style="width: 15%; margin-bottom: 20px;">
-
-
-                        <label for="padding-top">Padding-top</label>
-                        <input type="text" id="padding-top" name="" style="width: 15%; margin-bottom: 20px;">
-
-                        <label for="padding-bottom">Padding-bott</label>
-                        <input type="text" id="padding-bottom" name="" style="width: 15%; margin-bottom: 20px;">
+                        <label for="margin-right" style="margin-left: 10px;">Margin-R</label>
+                        <input type="text" id="margin-right" name="" placeholder="20px.." style="margin-left:15px;width: 20%;margin-bottom: 10px; text-align:center;">
 
 
 
-                        <!-- <button class="btn btn-primary"></button> -->
+                        <label for="padding-left">Padding-L</label>
+                        <input type="text" id="padding-left" name="" placeholder="20px.." style="width: 20%; margin-bottom: 20px; text-align:center;">
+
+                        <label for="padding-right" style="margin-left: 10px;">Padding-R</label>
+                        <input type="text" id="padding-right" name="" placeholder="20px.." style="margin-left:5px; width: 20%; margin-bottom: 20px; text-align:center;">
+
+
+                        <label for="margin-top">Margin-T</label>
+                        <input type="text" id="margin-top" name="" placeholder="20px.." style="margin-left:6px;width: 20%; margin-bottom: 20px; text-align:center;">
+
+                        <label for="margin-bottom" style="margin-left: 10px;">Margin-B</label>
+                        <input type="text" id="margin-bottom" name="" placeholder="20px.." style="margin-left:10px;width: 20%; margin-bottom: 20px;text-align:center;">
+
+
+
+                        <label for="padding-top">Padding-T</label>
+                        <input type="text" id="padding-top" name="" placeholder="20px.." style="width: 20%; margin-bottom: 20px;text-align:center;">
+
+
+                        <label for="padding-bottom" style="margin-left: 10px;">Padding-B</label>
+                        <input type="text" id="padding-bottom" name="" placeholder="20px.." style="width: 20%; margin-bottom: 20px;text-align:center;">
+
+
+                        <div style="text-align: center; padding: 15px 12px;">
+                            <span><button style=" padding: 5px 15px; border-radius: 20px; border: 2px solid #997404;background: #997404; color: white;">Reset Padding</button></span>
+
+                            <span><button style="margin-left: 5px; padding: 5px 15px; border-radius: 20px; border: 2px solid #997404; background: #997404; color: white;">Reset Margin</button></span>
+                        </div>
+
 
                         <!-- <label for="margin-top">Margin-top</label>
                         <input type="text" id="margin-top" name="" style="width:var(--mywidth);">
                         <label for="margin-bottom">Margin-bottom</label>
                         <input type="text" id="margin-bottom" name="" style="width:var(--mywidth);"> -->
-
-
-
-
                     </div>
                 </section>
             </div>
