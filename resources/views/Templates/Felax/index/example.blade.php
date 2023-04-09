@@ -14,7 +14,9 @@
             <div class="col-lg-2">
                 <div class="main-banner-img owl-carousel">
                     <div class="main-banner-img-content" data-dot="1">
-                        <img class="" src="{{asset('assets/Felax/images/banner/banner-1-2.jpg')}}" alt="image">
+                       
+                        <img src="{{asset('assets/Felax/images/banner/banner-1-2.jpg')}}" onclick="editImage(this.src)" alt="image">
+
                     </div>
 
                 </div>

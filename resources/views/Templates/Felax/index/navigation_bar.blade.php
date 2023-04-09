@@ -17,9 +17,8 @@
         <div class="main-nav ">
             <div class="container-fluid" style="">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="{{ asset('assets/Felax/images/logo.png') }}" alt="logo" />
-                    </a>
+                   
+                <img src="{{ asset('assets/Felax/images/logo.png') }}" onclick="editImage(this.src)" alt="logo" />                   
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item plus-icon">

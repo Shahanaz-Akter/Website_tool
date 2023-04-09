@@ -19,6 +19,40 @@
         box-sizing: border-box;
     }
 
+
+
+    .file-input__input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .file-input__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 12px;
+        background-color: green;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .file-input__label svg {
+        height: 16px;
+        margin-right: 4px;
+    }
+
+
+
+
+
     /* range input tag css */
     #range-input1 {
         width: 100px;
@@ -44,9 +78,16 @@
         border: 1px solid black;
         width: 60px;
         text-align: center;
-        margin-left: 5px;
+        margin-right: 7px;
     }
 
+    #range-input-duration {
+        width: 40%;
+    }
+
+    #range-input-delay {
+        width: 40%;
+    }
 
     /* The switch - the box around the slider */
     .toggle {

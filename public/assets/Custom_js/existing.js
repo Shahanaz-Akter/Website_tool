@@ -163,21 +163,39 @@ const spacings = () => {
 
 // for hiding image_editor div 
 const disable1 = () => {
-    let image_editor = document.querySelector('#drag_parent');
-    // console.log(image_editor);
+    let img_editor_part = document.querySelector('#img_editor_part');
+    let img_editor_part_style = window.getComputedStyle(img_editor_part);
+    let img_editor_part_value = img_editor_part_style.getPropertyValue('display');
+    console.log(img_editor_part);
 
-    let image_editor_style = window.getComputedStyle(image_editor);
-    // console.log(image_editor_style);
-
-    let image_editor_property_value = image_editor_style.getPropertyValue('display');
-    // console.log(image_editor_property_value);
-
-    if (image_editor_property_value == 'block') {
-        image_editor.style.display = "none";
-    } else {
-        image_editor.style.display = "block";
+    if (img_editor_part_value == "none") {
+        img_editor_part.style.display = "";
+    }
+    else {
+        img_editor_part.style.display = "none";
     }
 }
+
+
+
+const disable2 = () => {
+    let linkImage = document.querySelector('#linkImage');
+    // console.log(image_editor);
+
+    let linkImage_style = window.getComputedStyle(linkImage);
+    // console.log(image_editor_style);
+
+    let linkImage_property_value = linkImage_style.getPropertyValue('display');
+    // console.log(image_editor_property_value);
+
+    if (linkImage_property_value == 'block') {
+        linkImage.style.display = "none";
+    } else {
+        linkImage.style.display = "block";
+    }
+}
+
+
 
 
 // for hiding modal div 
@@ -320,8 +338,6 @@ const file_upload = () => {
     }
 }
 
-
-
 const content = () => {
     let cont1 = document.querySelector('#cont');
     let desig1 = document.querySelector('#desig');
@@ -377,3 +393,25 @@ const design = () => {
 }
 
 
+function editImage(image_src) {
+
+    let uploading_img1 = document.querySelector('#uploading_img1');
+    let uploading_img2 = document.querySelector('#uploading_img2');
+
+    let img_editor_part = document.querySelector('#img_editor_part');
+    let img_editor_part_style = window.getComputedStyle(img_editor_part);
+    let img_editor_part_value = img_editor_part_style.getPropertyValue('display');
+    console.log(img_editor_part);
+
+    if (img_editor_part_value == "none") {
+        img_editor_part.style.display = "";
+        uploading_img1.src = image_src;
+        uploading_img2.src = image_src;
+        // uploading_img.setAttribute('src', uploading_img.src);
+    } else {
+        img_editor_part.style.display = "none";
+    }
+
+
+
+}
